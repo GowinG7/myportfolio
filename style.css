@@ -331,6 +331,8 @@ header ul a:hover{
 .card:nth-child(4) h1{
     bottom: 35%;
 }
+
+
 /* projects */
 .projects{
     display: flex;
@@ -442,6 +444,8 @@ header ul a:hover{
 .hover-sign.active{
     display: none;
 }
+
+
 /* Skills section */
 .skills{
     display: flex;
@@ -509,7 +513,7 @@ header ul a:hover{
 
 
   /* Slider for skills section */
-.slider {
+.slider { 
     position: absolute;
     bottom: 5%;
     right: 20%;
@@ -520,7 +524,6 @@ header ul a:hover{
     mix-blend-mode: difference;
     opacity: 0.8;
 }
-
 .slider .list {
     display: flex;
     width: calc(var(--width) * var(--quantity) + var(--gap) * (var(--quantity) - 1)); /* Full width of both sets of images */
@@ -528,19 +531,15 @@ header ul a:hover{
     animation: autoRun 10s linear infinite;
     transition: transform 0.5s ease; /* Smooth transition for sliding */
 }
-
 .slider .list .item {
     width: var(--width);
     height: var(--height);
     margin-right: var(--gap); /* Gap between items */
     transition: filter 0.5s;
 }
-
 .slider .list .item img {
     width: 100%;
 }
-
-/* Keyframes for sliding animation */
 @keyframes autoRun {
     0% {
         transform: translateX(0); /* Start from the left side */
@@ -549,22 +548,91 @@ header ul a:hover{
         transform: translateX(calc(-1 * (var(--width) * var(--quantity) + var(--gap) * (var(--quantity) - 1)))); /* Move all items to the left */
     }
 }
-
 /* Pause animation on hover */
 .slider:hover .list {
     animation-play-state: paused !important;
 }
-
 /* Apply grayscale effect */
 .slider .item:hover {
     filter: grayscale(0);
 }
-
 /* Apply grayscale filter to all items when slider is hovered */
 .slider:hover .list .item {
     filter: grayscale(1);
 }
 
+
+
+/*Contact Section*/
+.contact-section{
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    align-items: center;
+    position: relative;
+}
+.contact-section h1{
+    position: absolute;
+    top: 10%;
+    left: 40%;
+}
+.social-box{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.social-box a{
+    color: lightgray;
+    text-decoration: none;
+    font-size: 20px;
+    text-wrap: nowrap;
+}
+.social-box i{
+    color: #727fde;
+    font-size: 30px;
+    margin-right: 10px;
+}
+.social-icons a i{
+    color: white;
+    margin-top: 40px;
+}
+/* .contact-box p{
+    max-width: 400px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+} */
+.contact-box label{
+    margin: 7px 0;
+    display: block;
+}
+.contact-box input{
+    padding: 7.5px 30px;
+    background-color: lightgray;
+    width: 80%;
+    height: 25px;
+    margin-bottom: 7px;
+    border: none;
+    outline: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.contact-box button{
+    margin-top: 10px;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #727fded4;
+    background-color: #2200493d;
+    box-shadow: 0 0 5px #727fde86;
+    cursor: pointer;
+    transition: 0.3s; 
+}
+.contact-box button:hover{
+    box-shadow: 0 0 15px #727fde86;
+    opacity: 0.7;
+}
 
 
 
