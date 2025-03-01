@@ -706,6 +706,7 @@ footer h1{
         opacity: 0;
     }
 }
+
 /* Auto Display Animation */
 .autoDisplay{
     animation: autoDispalyAnimation both;
@@ -724,6 +725,26 @@ footer h1{
     }
 }
 
+/* Fadein-right*/
+.fadein-right{
+    animation: fadeInAnimation both;
+    animation-timeline: view();
+}
+@keyframes fadeInAnimation{
+    0%{
+        opacity: 0;
+        transform: translateX(-550px) scale(0.2);
+        filter: blur(20px);
+    }
+    35%,65%{
+        opacity: 1;
+        transf0rm: translateX(0px) scale(1);
+        filter: blur(0);
+    }
+    100%{
+        filter: blur(20px);
+    }
+}
 
 
 
