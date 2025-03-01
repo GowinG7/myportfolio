@@ -575,15 +575,22 @@ header ul a:hover{
 
 /*Contact Section*/
 .contact-section{
-    margin: 10%;
+    /* margin: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20%;
     position: relative;
+
 }
 .contact-section h1{
-    left: 30%;
-    margin: 40px;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
 }
 .social-box{
     display: flex;
@@ -699,7 +706,23 @@ footer h1{
         opacity: 0;
     }
 }
-
+/* Auto Display Animation */
+.autoDisplay{
+    animation: autoDispalyAnimation both;
+    animation-timeline: view();
+}
+@keyframes autoDispalyAnimation{
+    from{
+        filter: blur(10px);
+        transform: translateY(-200px) scale(0);
+        opacity: 0.2;
+    }
+    50%{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0) scale(1);
+    }
+}
 
 
 
