@@ -46,3 +46,21 @@ close.addEventListener("click", function () {
     sideBar.classList.remove("open-sidebar")
     sideBar.classList.add("close-sidebar")
 })
+
+
+
+
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent default jump
+        const targetId = this.getAttribute('href').substring(1); // Remove #
+        const targetSection = document.getElementById(targetId);
+
+        window.scrollTo({
+            top: targetSection.offsetTop - 50, // Adjust for fixed navbar
+            behavior: 'smooth'
+        });
+    });
+});
+
+

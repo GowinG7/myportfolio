@@ -18,9 +18,10 @@
                 <span  class="name">Gobinda Ghimire</span>
             </div>
             <ul>
-               <li><a href="#">About</a> </li>
-               <li><a href="#">Skills</a> </li>
-               <li><a href="#">Projects</a> </li> 
+               <li><a href="#home">Home</a> </li> 
+               <li><a href="#about">About</a> </li>
+               <li><a href="#skill">Skills</a> </li>
+               <li><a href="#project">Projects</a> </li> 
             </ul>
             <div class="box-icons">
                  <a href="https://web.telegram.org/" target="_blank"><i class='bx bxl-telegram'></i></a> 
@@ -31,16 +32,16 @@
             <div class="menu-icon"><i class='bx bx-menu'></i></div>
 
          </header>
-
+<!-- sidebar is for the mobile screen -->
          <div class="sidebar">
             <div class="close-icon">
                 <i class="bx bx-x"></i>
             </div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Projects</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skill">Skills</a></li>
+                <li><a href="#project">Projects</a></li>
             </ul>
             
             <div class="social-icons">
@@ -50,7 +51,9 @@
             </div>
          </div>
 
-        <section class="home">
+
+
+        <section class="home" id="home">
             <div class="home-info autoBlur">
                 <div class="home-info-title">
                     <i class='bx bxl-sketch'></i>
@@ -59,7 +62,13 @@
 
                 <h1>Providing<span class="gradient"> the best </span>Project <span class="gradient">Experience</span></h1>
                 <p>I'm a Front-end and backend developer working with HTML, CSS, JS, Bootstrap, Ajax, PHP and Mysql. Also have good knowledge in proper documentation of the project with all required diagram  </p> 
-                <button><i class='bx bx-send' style="margin-right: 7px;"></i>Contact Me</button>
+              
+                <!-- contact me button ma click grney bittikai contact section ma janey (yo use 
+                kinaki js use grya xaina ani css ma scroll behaviour smooth ni grya xaina) -->
+                <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
+                    <i class='bx bx-link-external'></i> Contact Me
+                </button>
+
             </div>
 
             <div class="home-vid-box">
@@ -67,10 +76,11 @@
                 type="video/mp4"></video>
             </div>
 
-            <div class="scroll-down"></div>
+            <div class="scroll-down" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })"></div>
+            
         </section>  
 
-        <section class="info-section">
+        <section class="info-section" id="about">
             <h1 class="section-title autoDisplay">Hello, there &hearts;</h1>
             <div class="info-cards">
                 <div class="card">
@@ -87,7 +97,13 @@
                     <h1>I am flexible to work </h1>
                     <p >I'm from Nepal and open to remote work worldwide with efficient prices </p>
                     <video src="videos/globle.mp4" type="video/mpp4" autoplay loop muted plays-inline ></video>
-                    <button><i class='bx bx-link-external'></i>Contact Me</button>
+
+                    <!-- contact me button ma click grney bittikai contact section ma janey (yo use 
+                    kinaki js use grya xaina ani css ma scroll behaviour smooth ni grya xaina) -->
+                    <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
+                        <i class='bx bx-link-external'></i> Contact Me
+                    </button>
+                      
                 </div>
                 <div class="card">
                     <h1>My Passion for Coding</h1>
@@ -97,7 +113,7 @@
             </div>
         </section>
 
-        <section class="projects">
+        <section class="projects" id="project">
             <h1 class="section-title autoDisplay "><i class='bx bx-laptop'></i>My Projects</h1>
 
             <div class="project-card">
@@ -111,7 +127,7 @@
                     <p>Nepali Stay is the online hotel room booking system created with the used of technology like html, css,
                          bootstrap, js, ajax, mysql and php aims to be implemented as online hotel room booking system of specific
                           hotel with the all controls to the hotel owners.</p>
-                    <button><i class='bx bx-link-external'></i>View Project</button>
+                    <!-- <button><i class='bx bx-link-external'></i>View Project</button> -->
                 </div>
             </div>
 
@@ -124,24 +140,24 @@
                     <p>Nepali Stay is the online hotel room booking system created with the used of technology like html, css,
                         bootstrap, js, ajax, mysql and php aims to be implemented as online hotel room booking system of specific
                          hotel with the all controls to the hotel owners.</p>
-                    <button><i class='bx bx-link-external'></i>View Project</button>
+                    <!-- <button><i class='bx bx-link-external'></i>View Project</button> -->
                 </div>
             </div>
 
-            <div class="project-card ">
+            <div class="project-card " >
                 <div class="project-vidbox autoBlur">
                     <video id="projectVideo3" src="videos/project1.mp4" muted></video>
                 </div>
                 <div class="project-info fadein-right">
                     <h1><span class="gradient" >NEPALI STAY</span></h1>
                     <p>Nepali Stay is the online hotel room booking system created with the used of technology like html, css, bootstrap, js, ajax, mysql and php aims to be implemented as online hotel room booking system of specific hotel with the all controls to the hotel owners.</p>
-                    <button><i class='bx bx-link-external'></i>View Project</button>
+                    <!-- <button><i class='bx bx-link-external'></i>View Project</button> -->
                 </div>
             </div>
         </section>
 
 
-        <section class="skills">
+        <section class="skills" id="skill">
             <h1 class="section-title autoDisplay">
                 My Skills &#128187; 
             </h1>
@@ -183,7 +199,7 @@
         </section>
 
         <!--Contact section-->
-        <section class="contact-section">
+        <section class="contact-section" id="contact">
             <h1 class="section-title autoDisplay">Let's talk &#128578;</h1>
 
             <div class="social-box ">

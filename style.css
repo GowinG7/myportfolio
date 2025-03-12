@@ -4,6 +4,12 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     color : lightgrey;
 }
+/* Smooth scroll behavior for links that jump to
+ sections from the navbar links */
+html {
+    scroll-behavior: smooth;
+  }
+
 .container{
     position: relative;
     width: 100%;
@@ -393,7 +399,7 @@ header ul a:hover{
 }
 .project-info h1{
     width: 90%;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
     text-wrap: nowrap;
     margin-bottom: 10px;
@@ -401,6 +407,7 @@ header ul a:hover{
     max-width: 450px;
 }
 .project-info p{
+    font-size: 24px;
     width: 90%;
     max-width: 400px;
     min-width: 300px;
