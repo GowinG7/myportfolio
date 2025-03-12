@@ -381,7 +381,8 @@ header ul a:hover{
 }
 .project-vidbox video{
     object-fit: cover;
-    width: 100%;
+    width: 400px;
+    height: 250px;
     box-shadow: 0 0 10px lightgray;
     border-radius: 20px;
     transition: 0.5s;
@@ -693,6 +694,7 @@ footer p{
 
 /* Sidebar */
 .sidebar{
+    height: 90vh;
     position: fixed;
     right: 0;
     top: 0;
@@ -853,8 +855,7 @@ Open Sidebar animation */
  
     header{
         position: fixed;
-        height: 100px;
-    }
+        }
     header ul{
         display: none;
     }
@@ -866,11 +867,14 @@ Open Sidebar animation */
     }
     header .left img{
         width: 90px !important;     /* !important overrides the inline css*/
-        height: 90px !important;
+        height: 60px !important;
     }
     .menu-icon{
         display: inline;
         font-size: 55px;
+    }
+    .home-info .home-info-title{
+        margin-top:50%;
     }
     .home-info h1{
         font-size: 40px;
@@ -893,13 +897,17 @@ Open Sidebar animation */
     .info-cards{
         grid-template-columns: auto;
     }
+    .card{
+        height: 80vh;
+    }
     .card:nth-child(3){
         grid-column: span 2;
-        height: 80vh;
+        height: 100vh;
         width: 80%;
     }
     .card:nth-child(3) video{
         width: 100%;
+        height: 90%;
     }
     .info-cards .card h1{
         font-size: 20px;
@@ -914,7 +922,13 @@ Open Sidebar animation */
         margin-right: 10px;
     }
     .card:nth-child(3) h1{
-        bottom: 25%;
+        margin: 48px;
+        margin-left:auto;
+    }
+    .card:nth-child(3) p{        
+        margin: 26px;
+        margin-left:auto;
+
     }
     .card:nth-child(1){
         width: 100%;
@@ -924,10 +938,11 @@ Open Sidebar animation */
         width: 90%;
         height: 50%;
     }
-    .card:nth-child(2) img{
-        width: 98%;
+     .card:nth-child(2) img{
+        width: 100%;
         height: 50%;
-    }
+        object-fit: contain;
+    } 
     .card:nth-child(1) p{
         color:#879192;
     }
@@ -940,10 +955,10 @@ Open Sidebar animation */
     }
     .card:nth-child(4){
         width: 68%;
-        height: 30vh;
+        height: 65vh;
     }
     .card:nth-child(4) h1{
-        margin-bottom: 27px;
+        margin-bottom: 7px;
     }
     .card video{
         height: 65%;
@@ -953,7 +968,8 @@ Open Sidebar animation */
         margin-bottom: 300px;
     }
     .project-vidbox video{
-        width: 250px;
+        width: 290px !important;
+        height: 200px!important;
         margin-left: -100px;
     }
     .project-info{
@@ -961,17 +977,28 @@ Open Sidebar animation */
         margin-left: -50px;
     }
     .project-info h1{
-        font-size: 20px;
+        font-size: 25px;
         max-width: 200px;
         text-wrap: wrap;
     }
     .project-info p{
-        font-size: 10px;
-        text-wrap: wrap;
+        font-size: 15px;
+        color: white;
+        filter: none;
         max-width: 200px;
         min-width: 0;
     }
-    
+    .skills {
+        padding-top: 80px; /* Adjust as needed */
+    }
+    .coding .h1{
+        font-size: 15px;
+    }
+
+     .slider img{
+        width: 60%;
+        height: 75px;
+     }
     footer p{
         font-size: 20px;
         padding: 20px;
