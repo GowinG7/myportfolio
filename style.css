@@ -472,7 +472,7 @@ header ul a:hover{
 }
 .skills-box{
     width: 100%;
-    height: 90vh;
+    height: 70vh;
     position: relative;
     display: flex;
     align-items: start;
@@ -534,7 +534,7 @@ header ul a:hover{
     position: absolute;
     bottom: 5%;
     right: 20%;
-    width: 60%;
+    width: 0%;
     height: var(--height);
     overflow: hidden;
     mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
@@ -590,7 +590,7 @@ header ul a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20%;
+    margin-bottom: 100px;
     position: relative;
 
 }
@@ -671,7 +671,7 @@ footer{
     justify-content: center;
     height: 70px;
     box-shadow: 2px 5px 15px #6694d168;
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
     box-shadow: 0 0 15px rgba(255,255,255,0.356);
     z-index: 999;
 }
@@ -694,9 +694,8 @@ footer p{
 }
 
 .menu-icon{
-    font-size: 30px;
     cursor: pointer;
-     display: none;  /*mobile view ma matra display inline natra no */
+     display: none;  /*mobile rw tablet view ma matra display inline natra no */
 }
 
 /* Sidebar */
@@ -751,7 +750,7 @@ Open Sidebar animation */
 
 @keyframes openSidebarAnimation{
     to{
-        width: 80%;
+        width: 50%;
         opacity: 1;
         bottom: 0;
         border-radius: 0;
@@ -858,9 +857,27 @@ Open Sidebar animation */
 
 /* Tablet responsive */
 @media screen and (max-width: 1000px){
-    .box-icons{
-        margin-left: 10px;
-        margin-right: 2px;
+ 
+    header{
+        position: fixed;
+        height: 100px;
+    }
+    header ul{
+        display: none;
+    }
+    header .box-icons{
+        display: none;
+    }
+    header .left .name{
+        font-size: 35px;
+    }
+    header .left img{
+        width: 90px !important;     /* !important overrides the inline css*/
+        height: 90px !important;
+    }
+    .menu-icon{
+        display: inline;
+        font-size: 55px;
     }
     .home-info h1{
         font-size: 40px;
@@ -961,6 +978,7 @@ Open Sidebar animation */
         max-width: 200px;
         min-width: 0;
     }
+    
     footer p{
         font-size: 20px;
         padding: 20px;
@@ -1075,7 +1093,7 @@ Open Sidebar animation */
 @media screen and (max-width: 700px){
     header{
         position: fixed;
-        height: 50px;
+        height: 70px;
     }
     header ul{
         display: none;
@@ -1083,8 +1101,14 @@ Open Sidebar animation */
     header .box-icons{
         display: none;
     }
-    header{
-        font-size: 25px;
+    header .left img{
+        margin: -20px;
+        width: 50px!important;
+        height: 50px!important;
+    }
+    header .left .name{
+        margin-left: 22px;
+        font-size: 20px;
     }
     .home{
         flex-direction: column;
@@ -1096,6 +1120,7 @@ Open Sidebar animation */
         bottom: 5%;
     }
     .scroll-down{
+        margin-left: 50px;
         bottom: 5%;
     }
     .home-info h1{
@@ -1106,9 +1131,89 @@ Open Sidebar animation */
         top: 5%;
         right: 5%;
     }
-    .card video{
-        width: 100%;
+
+
+    /* Card adjustments */
+    .card {
+        width: 100%; /* Make the card take full width */
+        margin: 0 auto; /* Center the card */
+        height: auto; /* Allow height to adjust based on content */
+        border-radius: 15px; /* Rounded corners for mobile */
+        padding: 15px; /* Add padding */
+        position: relative; /* For positioning child elements */
     }
+
+    /* Card image */
+    .card img {
+        width: 100%; /* Make sure image is responsive */
+        height: auto;
+        margin: 10px 0;
+        border-radius: 10px;
+    }
+
+    /* Card title */
+    .card h1 {
+        font-size: 1.8rem; /* Adjust title size for mobile */
+        position: static; /* Remove absolute positioning for mobile */
+        margin: 0;
+        padding-bottom: 10px; /* Space below title */
+        color: lightgray; /* Title color */
+    }
+
+    /* Card paragraph */
+    .card p {
+        font-size: 1rem; /* Adjust text size */
+        color: gray; /* Text color */
+        margin-top: 10px; /* Space above text */
+        max-width: 100%; /* Allow text to take full width */
+        line-height: 1.5;
+        padding-bottom: 10px;
+    }
+
+    /* Card video */
+    .card video {
+        width: 100%; /* Video should take full width */
+        height: auto;
+        margin-top: 20px;
+    }
+
+    /* Button styling */
+    .card button {
+        bottom: 5%;
+        left: 5%;
+        padding: 8px 12px;
+        font-size: 14px; /* Smaller button text */
+        background-color: #2200493d;
+        border-radius: 10px;
+        border: 1px solid #727fded4;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    /* Button hover */
+    .card button:hover {
+        box-shadow: 0 0 15px #727fde86;
+        color: rgb(22, 168, 42);
+        opacity: 0.7;
+    }
+
+    /* Hover effects */
+    .card:hover {
+        box-shadow: 0px 0px 15px rgb(168, 179, 175);
+    }
+
+    /* Specific adjustments for third and fourth cards */
+    .card:nth-child(3) {
+        height: auto; /* Remove fixed height for third card */
+    }
+
+    .card:nth-child(4) {
+        grid-column: span 1; /* Ensure the 4th card is in one column */
+    }
+}
+
+
     .projects{
         margin-bottom: 600px;
     }
@@ -1121,7 +1226,8 @@ Open Sidebar animation */
         width: 85%;
     }
     .project-info h1{
-        text-wrap: nowrap;
+        white-space: normal;
+        word-wrap: break-word;
     }
     .project-info p{
         max-width: 300px;
@@ -1162,7 +1268,8 @@ Open Sidebar animation */
 
     .menu-icon{
         display: inline;
-
+        font-size: 32px;
+        margin-right: -20px;
     }
 
 }
