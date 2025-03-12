@@ -15,6 +15,14 @@ const video3 = document.getElementById('projectVideo3');
 // ani hmle teha euta video ma cursor lagayerw demo deka xau for better understandabality
 const hoverSign = document.querySelector(".hover-sign");
 
+
+
+//Sidebar elements
+const sideBar = document.querySelector('.sidebar');
+const menu = document.querySelector('.menu-icon');
+const close = document.querySelector('.close-icon');
+
+
 const videoList = [video1, video2, video3];
 
 videoList.forEach(function(video){
@@ -26,4 +34,15 @@ videoList.forEach(function(video){
         video.pause();
         hoverSign.classList.remove("active")
     })
+})
+
+// sidebar elements //
+menu.addEventListener("click", function () {
+    sideBar.classList.remove("close-sidebar")
+    sideBar.classList.add("open-sidebar");
+})
+
+close.addEventListener("click", function () {
+    sideBar.classList.remove("open-sidebar")
+    sideBar.classList.add("close-sidebar")
 })
