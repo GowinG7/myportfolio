@@ -1163,7 +1163,7 @@ Open Sidebar animation */
     }
 
     .slider {
-        bottom: -50%;
+        bottom: -27%;
     }
 
     .card h1 {
@@ -1176,108 +1176,6 @@ Open Sidebar animation */
     }
 }
 
-/* Mobile responsive
-@media screen and (max-width: 700px){
-    .container video{
-        margin-top: 10%;
-    }
-    header {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-    }
-    header .left {
-        justify-content: center;
-        width: 100%;
-    }
-    header ul {
-        align-items: center;
-        width: 100%;
-    }
-    header .box-icons {
-        justify-content: center;
-        width: 100%;
-        padding-top: 5px;
-    }
-     .home{
-        margin-top: 20%;
-        justify-content: center ;
-        flex-direction: column;
-     }
-     .autoBlur{
-        animation: none;
-     }
-     .home-info{
-        bottom: 5%;
-     }
-     .scroll-down{
-        margin-left: 2%;
-        margin-bottom: -30%; 
-     }
-     .home-info h1{
-        line-height: 50px;
-     }
-     .home-vid-box{
-        height: 200px;
-        top: 5%;
-        right: 5%;
-     }
-     .card video{
-        width: 100%;
-     }
-     .projects{
-        margin-bottom: 600px;
-     }
-     .project-card{
-        flex-direction: column;
-        margin-left: 25%;
-        gap: 30px;
-     }
-     .project-info{
-        width: 85%;
-     }
-     .project-info h1{
-        text-wrap: nowrap;
-     }
-     .project-info p{
-        max-width: 300px;
-     }
-     .designer{
-        top: 15%;
-        left: 18%;
-     }
-     .coding{
-        top: 50%;
-        left: 18%;
-     }
-     .skills-box h1{
-        margin-bottom: 0;
-        margin-top:70px;
-     }
-     .slider{
-        bottom: 0;
-     }
-     .slider img{
-        width: 60%;
-     }
-     .contact-section{
-        flex-direction:  column;
-        margin-top: 100px;
-        margin-bottom: 30%;
-     }
-     .contact-section .section-title{
-      
-        left: 10%;
-     }
-     
-     footer p{
-        font-size: 14px;
-        padding: 20px;
-     }
-     .project-vidbox{
-        min-width: 200px;
-     }
-} */
 
 /* Mobile Responsive */
 @media screen and (max-width: 700px) {
@@ -1286,22 +1184,17 @@ Open Sidebar animation */
         height: 70px;
     }
 
-    header ul {
-        display: none;
-    }
-
-    header .box-icons {
+    header ul, header .box-icons {
         display: none;
     }
 
     header .left img {
-        margin: -20px;
         width: 50px !important;
         height: 50px !important;
     }
 
     header .left .name {
-        margin-left: 22px;
+        margin-left: 10px;
         font-size: 20px;
     }
 
@@ -1315,6 +1208,7 @@ Open Sidebar animation */
 
     .home-info {
         bottom: 5%;
+        text-align: center;
     }
 
     .scroll-down {
@@ -1328,22 +1222,31 @@ Open Sidebar animation */
 
     .home-vid-box {
         height: 200px;
-        top: 5%;
-        right: 5%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
-    .projects {
-        margin-bottom: 600px;
-    }
-
+    /* Fix overlapping issue in projects */
     .project-card {
         flex-direction: column;
-        margin-left: 25%;
-        gap: 30px;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+    .project-vidbox {
+        width: 100%;
+        min-width: 250px;
     }
 
     .project-info {
-        width: 85%;
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
     }
 
     .project-info h1 {
@@ -1352,26 +1255,26 @@ Open Sidebar animation */
     }
 
     .project-info p {
-        max-width: 300px;
+        max-width: 100%;
+        margin-top: 10px;
     }
 
-    .designer {
-        top: 15%;
-        left: 18%;
+    /* Ensure coding and design sections display separately */
+    .skills-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
     }
 
-    .coding {
-        top: 50%;
-        left: 18%;
-    }
-
-    .skills-box h1 {
-        margin-bottom: 0;
-        margin-top: 70px;
+    .coding, .designer {
+        width: 90%;
+        margin-bottom: 20px;
     }
 
     .slider {
-        margin-bottom: -50%;
+        margin-bottom: 20px;
     }
 
     .slider img {
@@ -1380,6 +1283,7 @@ Open Sidebar animation */
 
     .contact-section {
         flex-direction: column;
+        text-align: center;
         margin-top: 100px;
         margin-bottom: 50px;
     }
@@ -1393,12 +1297,10 @@ Open Sidebar animation */
         font-size: 17px;
     }
 
-    .project-vidbox {
-        min-width: 200px;
-    }
-
     .menu-icon {
         display: inline;
         font-size: 32px;
         margin-right: -20px;
     }
+}
+
