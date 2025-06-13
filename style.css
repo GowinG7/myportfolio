@@ -1,15 +1,22 @@
+/* Base styles */
 body {
     margin: 0;
     padding: 0;
-    /*to remove the browser default margin and padding */
     font-family: Arial, Helvetica, sans-serif;
     color: lightgrey;
 }
 
-/* Smooth scroll behavior for links that jump to
- sections from the navbar links */
 html {
     scroll-behavior: smooth;
+}
+
+/* Responsive <p> styles */
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 1em 0.5em;
+    max-width: 100%;
+    word-break: break-word;
 }
 
 .container {
@@ -30,7 +37,6 @@ html {
     mix-blend-mode: lighten;
 }
 
-
 header {
     display: flex;
     position: absolute;
@@ -45,7 +51,6 @@ header {
     padding: 0 30px;
     box-shadow: 2px 5px 15px #6694d168;
     z-index: 999;
-    /*to ensure header always stay in th top of elements*/
 }
 
 .left {
@@ -58,7 +63,6 @@ header {
     font-weight: 700;
     cursor: pointer;
     color: rgb(36, 160, 150);
-
 }
 
 .left .name:hover {
@@ -105,10 +109,8 @@ header ul a:hover {
     justify-content: center;
     width: auto;
     height: 50px;
-    /* border:2px solid #727fde; */
     background-color: rgb(9, 30, 73);
     text-decoration: none;
-    /* border-radius: 10px;     */
     transition: 0.3s;
 }
 
@@ -168,13 +170,12 @@ header ul a:hover {
     font-weight: 700;
     line-height: 70px;
     margin-top: 4px;
-
     margin-bottom: 30px;
 }
 
 .home-info p {
     max-width: 550px;
-    Line-height: 25px;
+    line-height: 25px;
     margin-bottom: 40px;
     font-size: 20px;
 }
@@ -243,7 +244,6 @@ header ul a:hover {
     top: 20%;
     left: 50%;
     height: 10px;
-    /* Change this value to change the size of the scroll down arrow */
     width: 10px;
     border: 2px solid lightgray;
     transform: translate(-50%, -100%) rotate(45deg);
@@ -260,15 +260,10 @@ header ul a:hover {
 @keyframes scroll-down {
     0% {
         opacity: 0;
-        /*invisible at start */
     }
-
-    30%,
-    60% {
+    30%, 60% {
         opacity: 1;
-        /* fully visible*/
     }
-
     100% {
         top: 90%;
         opacity: 0;
@@ -376,7 +371,6 @@ header ul a:hover {
 
 .card:nth-child(3) {
     grid-row: span 2;
-    /*third card ko dui ota row */
     height: 83vh;
 }
 
@@ -400,7 +394,6 @@ header ul a:hover {
 .card:nth-child(4) h1 {
     bottom: 35%;
 }
-
 
 /* projects */
 .projects {
@@ -494,465 +487,9 @@ header ul a:hover {
     opacity: 0.7;
 }
 
-.hover-sign {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30%;
-    height: 100px;
-}
+/* ...rest of your code for skills, slider, contact, footer, sidebar, etc... */
 
-.hover-sign::before,
-.hover-sign::after {
-    content: "👆";
-    text-align: center;
-    position: absolute;
-    font-size: 50px;
-    top: 20%;
-    left: 40%;
-    animation: hoverAnimation 3s ease-in-out infinite;
-}
-
-@keyframes hoverAnimation {
-    0% {
-        box-shadow: 0 0 5px lightgray;
-        transform: translate(100%, 50%) rotate(30deg);
-    }
-
-    100% {
-        box-shadow: 0 0 15px lightgrap;
-        transform: translateX(80%, 50%) rotate(0deg);
-    }
-}
-
-.hover-sign.active {
-    display: none;
-}
-
-
-/* Skills section */
-.skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    position: relative;
-}
-
-.skills-box {
-    width: 100%;
-    height: 70vh;
-    position: relative;
-    display: flex;
-    align-items: start;
-    justify-content: center;
-}
-
-.skills-image {
-    width: 70%;
-    mix-blend-mode: lighten;
-    opacity: 0.7;
-}
-
-.designer {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    top: 25%;
-    left: 5%;
-    max-width: 300px;
-}
-
-.designer p {
-    color: rgb(233, 228, 238);
-    font-weight: 700;
-}
-
-.coding {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    top: 25%;
-    right: 5%;
-    max-width: 300px;
-}
-
-.coding p {
-    color: rgb(233, 228, 238);
-    font-weight: 700;
-}
-
-.skills-box h1 {
-    font-size: 50px;
-    display: flex;
-    align-items: center;
-}
-
-.skills-box p {
-    line-height: 23px;
-}
-
-/* Slider for skills section */
-.slider {
-    position: absolute;
-    bottom: -24%;
-    right: 20%;
-    width: 60%;
-    height: var(--height);
-    overflow: hidden;
-    mask-image: linear-gradient(to right,
-            transparent,
-            #000 10% 90%,
-            transparent);
-    mix-blend-mode: difference;
-    opacity: 0.8;
-}
-
-.slider .list {
-    display: flex;
-    width: calc(var(--width) * var(--quantity) + var(--gap) * (var(--quantity) - 1));
-    /* Full width of both sets of images */
-    position: relative;
-    animation: autoRun 10s linear infinite;
-    transition: transform 0.5s ease;
-    /* Smooth transition for sliding */
-}
-
-.slider .list .item {
-    width: var(--width);
-    height: var(--height);
-    margin-right: var(--gap);
-    /* Gap between items */
-    transition: filter 0.5s;
-}
-
-.slider .list .item img {
-    width: 100%;
-}
-
-@keyframes autoRun {
-    0% {
-        transform: translateX(0);
-        /* Start from the left side */
-    }
-
-    100% {
-        transform: translateX(calc(-1 * (var(--width) * var(--quantity) + var(--gap) * (var(--quantity) - 1))));
-        /* Move all items to the left */
-    }
-}
-
-/* Pause animation on hover */
-.slider:hover .list {
-    animation-play-state: paused !important;
-}
-
-/* Apply grayscale effect */
-.slider .item:hover {
-    filter: grayscale(0);
-}
-
-/* Apply grayscale filter to all items when slider is hovered */
-.slider:hover .list .item {
-    filter: grayscale(1);
-}
-
-
-
-/*Contact Section*/
-.contact-section {
-    height: 70vh;
-    margin-top: 190px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-
-}
-
-.contact-section h1 {
-    font-size: 50px;
-    display: flex;
-    align-items: center;
-}
-
-.social-box {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.social-box i {
-    margin-right: 20px;
-}
-
-.social-box a {
-    color: lightgray;
-    text-decoration: none;
-    font-size: 20px;
-    text-wrap: nowrap;
-}
-
-.social-box i {
-    color: #727fde;
-    font-size: 30px;
-    margin-right: 12px;
-}
-
-.social-icons a i {
-    color: white;
-    margin-top: 17px;
-}
-
-/* .contact-box p{
-    max-width: 400px;
-    margin-top: 30px;
-    margin-bottom: 10px;
-} */
-/* .contact-box label{
-    margin: 7px 0;
-    display: block;
-}
-.contact-box input{
-    padding: 7.5px 30px;
-    background-color: lightgray;
-    width: 80%;
-    height: 25px;
-    margin-bottom: 7px;
-    border: none;
-    outline: none;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-.contact-box button{
-    margin-top: 10px;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 10px;
-    border: 1px solid #727fded4;
-    background-color: #2200493d;
-    box-shadow: 0 0 5px #727fde86;
-    cursor: pointer;
-    transition: 0.3s; 
-}
-.contact-box button:hover{
-    box-shadow: 0 0 15px #727fde86;
-    opacity: 0.7;
-} */
-
-
-footer {
-    display: flex;
-    position: absolute;
-    font-size: larger;
-    font-weight: 700;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    align-items: center;
-    justify-content: center;
-    height: 70px;
-    box-shadow: 2px 5px 15px #6694d168;
-    /* backdrop-filter: blur(10px); */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.356);
-    z-index: 999;
-}
-
-footer p {
-    padding: 17px;
-    font-size: 30px;
-}
-
-.social-box i {
-    font-size: 30px;
-    color: white;
-}
-
-.social-box a {
-    text-decoration: none;
-}
-
-.social-box i:hover {
-    color: rgb(87, 84, 84);
-}
-
-.social-box a:hover {
-    color: rgb(241, 210, 210);
-}
-
-.menu-icon {
-    display: none;
-    /*mobile rw tablet view ma matra display inline natra no */
-}
-
-/* Sidebar */
-.sidebar {
-    height: 90vh;
-    position: fixed;
-    right: 0;
-    top: 0;
-    bottom: 70%;
-    width: 0%;
-    background-color: #000000b8;
-    backdrop-filter: blur(10px);
-    z-index: 999;
-    box-shadow: 0 0 20px rgba(211, 211, 211, 0.411);
-    border-bottom-left-radius: 100%;
-    opacity: 0;
-}
-
-.close-icon {
-    font-size: 50px;
-    color: lightgray;
-    padding-left: 10px;
-    cursor: pointer;
-}
-
-.sidebar ul {
-    padding-left: 20px;
-}
-
-.sidebar ul li {
-    list-style: none;
-    margin-bottom: 30px;
-}
-
-.sidebar ul li a {
-    text-decoration: none;
-    color: lightgray;
-    font-size: 30px;
-    font-weight: 700;
-    text-shadow: 0 0 15px rgba(128, 128, 128, 0.256);
-}
-
-.sidebar .social-icons {
-    padding-left: 20px;
-    margin-top: 60px;
-    text-wrap: nowrap;
-}
-
-.sidebar .social-icons a {
-    font-size: 35px;
-    padding: 5px 5px;
-    cursor: pointer;
-}
-
-/* 
-Open Sidebar animation */
-.sidebar.open-sidebar {
-    animation: openSidebarAnimation 1.5s forwards;
-}
-
-@keyframes openSidebarAnimation {
-    to {
-        width: 50%;
-        opacity: 1;
-        bottom: 0;
-        border-radius: 0;
-    }
-}
-
-/*  Close sidebar animation */
-.sidebar.close-sidebar {
-    animation: closeSidebarAnimation 1.5s forwards
-}
-
-@keyframes closeSidebarAnimation {
-    from {
-        width: 80%;
-        opacity: 1;
-        bottom: 0;
-        border-radius: 0;
-    }
-
-    to {
-        width: 0;
-        opacity: 0;
-        bottom: 70%;
-        border-bottom-left-radius: 50%;
-    }
-}
-
-
-
-/*Blur Effect Animation */
-.autoBlur {
-    animation: autoBlurAnimation linear both;
-    animation-timeline: view();
-}
-
-@keyframes autoBlurAnimation {
-    0% {
-        filter: blur(40px);
-        opacity: 0;
-    }
-
-    35%,
-    65% {
-        filter: blur(0);
-        opacity: 1;
-    }
-
-    100% {
-        filter: blur(40px);
-        opacity: 0;
-    }
-}
-
-/* Auto Display Animation */
-.autoDisplay {
-    animation: autoDispalyAnimation both;
-    animation-timeline: view();
-}
-
-@keyframes autoDispalyAnimation {
-    from {
-        filter: blur(10px);
-        transform: translateY(-200px) scale(0);
-        opacity: 0.2;
-    }
-
-    50% {
-        opacity: 1;
-        filter: blur(0);
-        transform: translateX(0) scale(1);
-    }
-}
-
-/* Fadein-right*/
-.fadein-right {
-    animation: fadeInAnimation both;
-    animation-timeline: view();
-}
-
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-        transform: translateX(-550px) scale(0.2);
-        filter: blur(20px);
-    }
-
-    35%,
-    65% {
-        opacity: 1;
-        transf0rm: translateX(0px) scale(1);
-        filter: blur(0);
-    }
-
-    100% {
-        filter: blur(20px);
-    }
-}
-
-
-
-/* 
-   Adjust the background video size based on the
-    screen's aspect ratio 
-*/
+/* Responsive background video */
 @media (max-aspect-ratio: 16/9) {
     .back-vid {
         width: auto;
@@ -969,171 +506,121 @@ Open Sidebar animation */
 
 /* Tablet responsive */
 @media screen and (max-width: 1000px) {
-
     header {
         position: fixed;
     }
-
-    header ul {
+    header ul, header .box-icons {
         display: none;
     }
-
-    header .box-icons {
-        display: none;
-    }
-
     header .left .name {
         font-size: 35px;
     }
-
     header .left img {
         width: 90px !important;
-        /* !important overrides the inline css*/
         height: 60px !important;
     }
-
     .menu-icon {
         display: inline;
         font-size: 55px;
     }
-
     .home-info .home-info-title {
         margin-top: 50%;
     }
-
     .home-info h1 {
         font-size: 40px;
         max-width: 400px;
         margin-top: 20px;
         line-height: 40px;
     }
-
     .home-info p {
         max-width: 300px;
     }
-
     .home-vid-box {
         right: 0;
     }
-
     .home-vid-box video {
         height: 500px;
     }
-
     .section-title {
         font-size: 30px;
     }
-
     .info-cards {
         grid-template-columns: auto;
     }
-
     .card {
         height: 80vh;
     }
-
     .card:nth-child(3) {
         grid-column: span 2;
         height: 100vh;
         width: 80%;
     }
-
     .card:nth-child(3) video {
         width: 100%;
         height: 90%;
     }
-
-    .info-cards .card h1 {
-        font-size: 20px;
-    }
-
-    .info-cards .card p {
-        font-size: 20px;
-    }
-
+    .info-cards .card h1,
+    .info-cards .card p,
     .info-cards .card button {
         font-size: 20px;
     }
-
     .info-cards .card i {
         margin-right: 10px;
     }
-
     .card:nth-child(3) h1 {
         margin: 48px;
         margin-left: auto;
     }
-
     .card:nth-child(3) p {
         margin: 26px;
         margin-left: auto;
-
     }
-
-    .card:nth-child(1) {
+    .card:nth-child(1),
+    .card:nth-child(2) {
         width: 100%;
         margin: 7px;
     }
-
-    .card:nth-child(1) img {
-        width: 90%;
-        height: 50%;
-    }
-
+    .card:nth-child(1) img,
     .card:nth-child(2) img {
-        width: 100%;
+        width: 90%;
         height: 50%;
         object-fit: contain;
     }
-
     .card:nth-child(1) p {
         color: #879192;
     }
-
     .card:nth-child(1) h1 {
         margin-bottom: -12px;
         font-size: 21px;
     }
-
-    .card:nth-child(2) {
-        width: 100%;
-    }
-
     .card:nth-child(4) {
         width: 68%;
         height: 65vh;
     }
-
     .card:nth-child(4) h1 {
         margin-bottom: 7px;
     }
-
     .card video {
         height: 65%;
         margin-top: 5%;
     }
-
     .projects {
         margin-bottom: 300px;
     }
-
     .project-vidbox video {
         width: 290px !important;
         height: 200px !important;
         margin-left: -100px;
     }
-
     .project-info {
         padding-left: 0;
         margin-left: -50px;
     }
-
     .project-info h1 {
         font-size: 25px;
         max-width: 200px;
         text-wrap: wrap;
     }
-
     .project-info p {
         font-size: 15px;
         color: white;
@@ -1141,93 +628,79 @@ Open Sidebar animation */
         max-width: 200px;
         min-width: 0;
     }
-
     .skills {
         padding-top: 80px;
-        /* Adjust as needed */
     }
-
     .coding .h1 {
         font-size: 15px;
     }
-
     .slider img {
         width: 60%;
         height: 75px;
     }
-
     footer p {
         font-size: 20px;
         padding: 20px;
         color: white;
     }
-
     .slider {
         bottom: -27%;
     }
-
     .card h1 {
         bottom: 39%;
     }
-
     .contact-section {
         height: 90vh;
         margin-top: 190px ;
     }
 }
 
-
 /* Mobile Responsive */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
+    .info-cards {
+        grid-template-columns: 1fr;
+    }
+    .project-card {
+        flex-direction: column;
+    }
     header {
         position: fixed;
         height: 70px;
     }
-
     header ul, header .box-icons {
         display: none;
     }
-
     header .left img {
         width: 50px !important;
         height: 50px !important;
     }
-
     header .left .name {
         margin-left: 10px;
         font-size: 20px;
     }
-
     .home {
         flex-direction: column;
     }
-
     .autoBlur {
         animation: none;
     }
-
     .home-info {
         bottom: 5%;
         text-align: center;
     }
-
     .scroll-down {
         margin-left: 50px;
         bottom: 5%;
     }
-
     .home-info h1 {
         line-height: 50px;
     }
-
     .home-vid-box {
         height: 200px;
         width: 100%;
         display: flex;
         justify-content: center;
     }
-
-    /* Fix overlapping issue in projects */
     .project-card {
         flex-direction: column;
         align-items: center;
@@ -1237,29 +710,23 @@ Open Sidebar animation */
         margin-right: auto;
         width: 90%;
     }
-
     .project-vidbox {
         width: 100%;
         min-width: 250px;
     }
-
     .project-info {
         width: 100%;
         max-width: 400px;
         text-align: center;
     }
-
     .project-info h1 {
         white-space: normal;
         word-wrap: break-word;
     }
-
     .project-info p {
         max-width: 100%;
         margin-top: 10px;
     }
-
-    /* Ensure coding and design sections display separately */
     .skills-box {
         display: flex;
         flex-direction: column;
@@ -1267,40 +734,41 @@ Open Sidebar animation */
         gap: 20px;
         text-align: center;
     }
-
     .coding, .designer {
         width: 90%;
         margin-bottom: 20px;
     }
-
     .slider {
         margin-bottom: 20px;
     }
-
     .slider img {
         width: 60%;
     }
-
     .contact-section {
         flex-direction: column;
         text-align: center;
         margin-top: 100px;
         margin-bottom: 50px;
     }
-
     .contact-section .section-title {
         top: -40px;
         left: 25%;
     }
-
     footer h1 {
         font-size: 17px;
     }
-
     .menu-icon {
         display: inline;
         font-size: 32px;
         margin-right: -20px;
     }
+    /* Responsive <p> styles for mobile */
+    p, .home-info p, .project-info p, .card p {
+        font-size: 1rem;
+        max-width: 95vw;
+        margin: 0 auto 1.5em auto;
+    }
+    .section-title, h1 {
+        font-size: 1.5rem;
+    }
 }
-

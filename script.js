@@ -1,66 +1,51 @@
+// Project video interactivity: play on hover, pause on mouseout
+const videos = document.querySelectorAll('.project-vidbox video');
+const hoverSign = document.querySelector('.hover-sign');
 
-// project video ma cursor layeC play huney ani move out vayeC
-// rokiney, so yo type ko interactivity banauna js used grney by giving
-// id to video elements
-const video1 = document.getElementById('projectVideo1');
-const video2 = document.getElementById('projectVideo2');
-const video3 = document.getElementById('projectVideo3');
-//yo chaie teha hmle tyo uppointing finger emojii interactive grna project section ko
-//  css section ma xa hover-sign ma xa .
-// hover-sign.active{
-// display: none;} so active bako bela (matlab jaba hmle cursor lanxau teti bela active ) tyo emojii hatxa
+if (videos.length && hoverSign) {
+    videos.forEach(video => {
+        video.addEventListener('mouseenter', () => {
+            video.play();
+            hoverSign.classList.add('active');
+        });
+        video.addEventListener('mouseleave', () => {
+            video.pause();
+            hoverSign.classList.remove('active');
+        });
+    });
+}
 
-//this only select the first one so used querySelectorAll
-
-// ani hmle teha euta video ma cursor lagayerw demo deka xau for better understandabality
-const hoverSign = document.querySelector(".hover-sign");
-
-
-
-//Sidebar elements
+// Sidebar elements
 const sideBar = document.querySelector('.sidebar');
 const menu = document.querySelector('.menu-icon');
 const close = document.querySelector('.close-icon');
 
+if (menu && sideBar) {
+    menu.addEventListener('click', () => {
+        sideBar.classList.remove('close-sidebar');
+        sideBar.classList.add('open-sidebar');
+    });
+}
+if (close && sideBar) {
+    close.addEventListener('click', () => {
+        sideBar.classList.remove('open-sidebar');
+        sideBar.classList.add('close-sidebar');
+    });
+}
 
-const videoList = [video1, video2, video3];
-
-videoList.forEach(function(video){
-    video.addEventListener('mouseover', function () {
-        video.play();
-        hoverSign.classList.add("active")
-    })
-    video.addEventListener('mouseout', function () {
-        video.pause();
-        hoverSign.classList.remove("active")
-    })
-})
-
-// sidebar elements //
-menu.addEventListener("click", function () {
-    sideBar.classList.remove("close-sidebar")
-    sideBar.classList.add("open-sidebar");
-})
-
-close.addEventListener("click", function () {
-    sideBar.classList.remove("open-sidebar")
-    sideBar.classList.add("close-sidebar")
-})
-
-
-
-
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault(); // Prevent default jump
-        const targetId = this.getAttribute('href').substring(1); // Remove #
-        const targetSection = document.getElementById(targetId);
-
-        window.scrollTo({
-            top: targetSection.offsetTop - 50, // Adjust for fixed navbar
-            behavior: 'smooth'
+// Smooth scroll for nav links
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: targetSection.offsetTop - 50,
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 });
-
-
