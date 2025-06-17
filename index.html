@@ -10,53 +10,31 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <div class="container">
-        <video class="back-vid" loop autoplay muted playsinline aria-label="Galaxy background video">
-            <source src="videos/galaxy.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
-        <header>
-            <div class="left">
-                <img src="images/my.jpg" alt="Gobinda Ghimire photo" style="height:40px;width:40px;border-radius:10px;">
-                <span class="name">Gobinda Ghimire</span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skill">Skills</a></li>
-                    <li><a href="#project">Projects</a></li>
-                </ul>
-            </nav>
-            <div class="box-icons">
-                <a href="https://web.telegram.org/" target="_blank" aria-label="Telegram"><i class='bx bxl-telegram'></i></a>
-                <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class='bx bxl-facebook-square'></i></a>
-                <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn"><i class='bx bxl-linkedin-square'></i></a>
-            </div>
-            <div class="menu-icon" aria-label="Open menu"><i class='bx bx-menu'></i></div>
-        </header>
-
-        <!-- Sidebar for mobile -->
-        <aside class="sidebar" aria-label="Sidebar navigation">
-            <div class="close-icon" aria-label="Close menu">
-                <i class="bx bx-x"></i>
-            </div>
+    <!-- Header and Navigation -->
+    <header>
+        <div class="left">
+            <img src="images/my.jpg" alt="Gobinda Ghimire photo" style="height:40px;width:40px;border-radius:10px;">
+            <span class="name">Gobinda Ghimire</span>
+        </div>
+        <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skill">Skills</a></li>
                 <li><a href="#project">Projects</a></li>
             </ul>
-            <div class="social-icons">
-                <a href="#"><i class='bx bxl-telegram'></i></a>
-                <a href="#"><i class='bx bxl-facebook-square'></i></a>
-                <a href="#"><i class='bx bxl-linkedin-square'></i></a>
-            </div>
-        </aside>
+        </nav>
+        <div class="box-icons">
+            <a href="https://web.telegram.org/" target="_blank" aria-label="Telegram"><i class='bx bxl-telegram'></i></a>
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class='bx bxl-facebook-square'></i></a>
+            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn"><i class='bx bxl-linkedin-square'></i></a>
+        </div>
+    </header>
 
+    <div class="container">
+        <!-- Home Section -->
         <section class="home" id="home">
-            <div class="home-info autoBlur">
+            <div class="home-info">
                 <div class="home-info-title">
                     <i class='bx bxl-sketch'></i>
                     My Portfolio 
@@ -76,8 +54,9 @@
             <div class="scroll-down" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })" aria-label="Scroll down"></div>
         </section>  
 
+        <!-- About Section -->
         <section class="info-section" id="about">
-            <h1 class="section-title autoDisplay">Hello, there &hearts;</h1>
+            <h1 class="section-title">Hello, there &hearts;</h1>
             <div class="info-cards">
                 <div class="card">
                     <h1>I'm Gobinda Ghimire</h1>
@@ -108,8 +87,9 @@
             </div>
         </section>
 
+        <!-- Projects Section -->
         <section class="projects" id="project">
-            <h1 class="section-title autoDisplay"><i class='bx bx-laptop'></i>My Projects</h1>
+            <h1 class="section-title"><i class='bx bx-laptop'></i>My Projects</h1>
             <div class="project-card">
                 <div class="project-vidbox autoBlur">
                     <video id="projectVideo1" muted playsinline aria-label="Project 1 demo">
@@ -118,58 +98,31 @@
                     </video>
                     <div class="hover-sign" aria-label="Hover sign"></div>
                 </div>
-                <div class="project-info fadein-right">
+                <div class="project-info">
                     <h1><span class="gradient">NEPALI STAY</span></h1>
                     <p>Nepali Stay is an online hotel room booking system created with HTML, CSS, Bootstrap, JS, Ajax, MySQL, and PHP. It aims to be implemented as an online hotel room booking system for specific hotels, with all controls to the hotel owners.</p>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-vidbox autoBlur">
-                    <video id="projectVideo2" muted playsinline aria-label="Project 2 demo">
-                        <source src="videos/project1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="project-info fadein-right">
-                    <h1><span class="gradient">NEPALI STAY</span></h1>
-                    <p>Nepali Stay is an online hotel room booking system created with HTML, CSS, Bootstrap, JS, Ajax, MySQL, and PHP. It aims to be implemented as an online hotel room booking system for specific hotels, with all controls to the hotel owners.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-vidbox autoBlur">
-                    <video id="projectVideo3" muted playsinline aria-label="Project 3 demo">
-                        <source src="videos/project1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="project-info fadein-right">
-                    <h1><span class="gradient">NEPALI STAY</span></h1>
-                    <p>Nepali Stay is an online hotel room booking system created with HTML, CSS, Bootstrap, JS, Ajax, MySQL, and PHP. It aims to be implemented as an online hotel room booking system for specific hotels, with all controls to the hotel owners.</p>
-                </div>
-            </div>
+            <!-- Add more project cards as needed -->
         </section>
 
+        <!-- Skills Section -->
         <section class="skills" id="skill">
-            <h1 class="section-title autoDisplay">
+            <h1 class="section-title">
                 My Skills &#128187; 
             </h1>
             <div class="skills-box">
                 <img class="skills-image" src="images/skills.png" alt="Skills illustration">
-                <div class="designer autoDisplay">
+                <div class="designer">
                     <h1 class="gradient">Designer <i class='bx bx-laptop'></i></h1>
                     <p>I have also engaged myself in learning UI/UX Design (web design) and have knowledge of Figma. I have sound knowledge in ER-diagram, DFD design, Gantt chart, various SDLC models, test case design, use case diagram, and more to help create projects (websites).</p>
                 </div>
-                <div class="coding autoDisplay">
+                <div class="coding">
                     <h1 class="gradient">Coding <i class='bx bx-code-block'></i></h1>
                     <p>I have knowledge of programming languages like HTML, CSS, JavaScript, PHP, MySQL, Bootstrap, Ajax, and Git/GitHub to build efficient and user-friendly websites. Additionally, I also have knowledge of other languages like C, Java, jQuery, and DSA.</p>
                 </div>
                 <div class="slider"  
-                    style="
-                    --width: 100px;
-                    --height: 100px;
-                    --quantity: 9; 
-                    --gap: 10px;
-                    ">
+                    style="--width: 100px; --height: 100px; --quantity: 9; --gap: 10px;">
                     <div class="list">
                         <div class="item" style="--position: 1"><img src="images/1.png" alt="HTML"></div>
                         <div class="item" style="--position: 2"><img src="images/2.png" alt="CSS"></div>
@@ -185,9 +138,9 @@
             </div>
         </section>
 
-        <!--Contact section-->
+        <!-- Contact Section -->
         <section class="contact-section" id="contact">
-            <h1 class="section-title autoDisplay">Let's talk &#128578;</h1>
+            <h1 class="section-title">Let's talk &#128578;</h1>
             <div class="social-box">
                 <a href="tel:9869610199"><i class='bx bxs-phone-call'></i>9869610199</a>
                 <a href="mailto:gowingg1@gmail.com"><i class='bx bx-envelope'></i>gowingg1@gmail.com</a>    
@@ -196,26 +149,12 @@
                     <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
                 </div>
             </div>
-            <!--
-            <div class="contact-box autoBlur">
-                <p>If you are looking to build a new website, improve an existing platform, or bring a unique project to life, I'm here to help &hearts;</p>
-                <label>Full Name</label>
-                <input type="text" placeholder="Your Full Name">
-                <label>Email Address</label>
-                <input type="email" placeholder="Your Email">
-                <label>Your Message</label>
-                <input class="input-message" type="text" placeholder="Share your thoughts...">
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <button><i class='bx bx-send'></i>Send Message</button>
-            </div>
-            -->
         </section>
 
-        <!--Footer Section-->
+        <!-- Footer -->
         <footer>
             <p>&copy; Gobinda, created by Gobinda Ghimire &#128521;</p>
         </footer>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
