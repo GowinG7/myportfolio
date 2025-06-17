@@ -657,12 +657,20 @@ header ul a:hover {
 
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {
+
     .info-cards {
         grid-template-columns: 1fr;
     }
     .project-card {
         flex-direction: column;
     }
+    info-cards {
+    grid-template-columns: 1fr;
+  }
+  .project-card {
+    flex-direction: column;
+  }
+
     header {
         position: fixed;
         height: 70px;
