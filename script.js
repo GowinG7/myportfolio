@@ -1,11 +1,17 @@
-// Hamburger menu for mobile navigation
-const hamburger = document.getElementById('hamburger');
-const navUl = document.querySelector('header nav ul');
-if (hamburger && navUl) {
-    hamburger.addEventListener('click', () => {
-        navUl.classList.toggle('active');
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.getElementById('hamburger');
+  const navUl = document.querySelector('header nav ul');
+  if (hamburger && navUl) {
+      hamburger.addEventListener('click', () => {
+          navUl.classList.toggle('active');
+      });
+  }
+  document.querySelectorAll('header nav ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+      navUl.classList.remove('active');
     });
-}
+  });
+});
 
 // Smooth scroll for nav links
 document.addEventListener('DOMContentLoaded', () => {
