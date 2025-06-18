@@ -520,6 +520,49 @@ footer {
   }
 }
 
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  gap: 6px;
+  margin-left: 1rem;
+}
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Show hamburger and hide nav on mobile */
+@media (max-width: 700px) {
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    background: #1a2233;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 1rem 0;
+    box-shadow: 0 4px 16px #22223b33;
+  }
+  header nav ul.active {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+
+
 @media (max-width: 700px) {
   .info-cards,
   .skills-box,

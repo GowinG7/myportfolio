@@ -1,35 +1,9 @@
-// Project video interactivity: play on hover, pause on mouseout
-const videos = document.querySelectorAll('.project-vidbox video');
-const hoverSign = document.querySelector('.hover-sign');
-
-if (videos.length && hoverSign) {
-    videos.forEach(video => {
-        video.addEventListener('mouseenter', () => {
-            video.play();
-            hoverSign.classList.add('active');
-        });
-        video.addEventListener('mouseleave', () => {
-            video.pause();
-            hoverSign.classList.remove('active');
-        });
-    });
-}
-
-// Sidebar elements
-const sideBar = document.querySelector('.sidebar');
-const menu = document.querySelector('.menu-icon');
-const close = document.querySelector('.close-icon');
-
-if (menu && sideBar) {
-    menu.addEventListener('click', () => {
-        sideBar.classList.remove('close-sidebar');
-        sideBar.classList.add('open-sidebar');
-    });
-}
-if (close && sideBar) {
-    close.addEventListener('click', () => {
-        sideBar.classList.remove('open-sidebar');
-        sideBar.classList.add('close-sidebar');
+// Hamburger menu for mobile navigation
+const hamburger = document.getElementById('hamburger');
+const navUl = document.querySelector('header nav ul');
+if (hamburger && navUl) {
+    hamburger.addEventListener('click', () => {
+        navUl.classList.toggle('active');
     });
 }
 
@@ -46,6 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     behavior: 'smooth'
                 });
             }
-        });
+            });
     });
 });
