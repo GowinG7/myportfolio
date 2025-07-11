@@ -24,7 +24,7 @@ header {
   background: linear-gradient(90deg, #1a2233 70%, #2563eb 100%);
   color: #fff;
   padding: 2rem 1rem 1.5rem 1rem;
-  box-shadow: 0 4px 24px rgba(26,34,51,0.10);
+  box-shadow: 0 4px 24px rgba(26, 34, 51, 0.10);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -46,6 +46,7 @@ header .name {
   letter-spacing: 1px;
   color: rgb(64, 216, 183);
 }
+
 header .name:hover {
   color: rgb(12, 158, 168);
 }
@@ -94,6 +95,7 @@ header .box-icons a:hover {
   gap: 6px;
   margin-left: 1rem;
 }
+
 .hamburger span {
   display: block;
   height: 4px;
@@ -107,6 +109,10 @@ header .box-icons a:hover {
 .mobile-socials {
   display: none;
 }
+.mobile-close{
+    display: none;
+  }
+
 .desktop-socials {
   display: flex;
   gap: 0.5rem;
@@ -117,6 +123,11 @@ header .box-icons a:hover {
   .desktop-socials {
     display: none;
   }
+
+  .box-icons {
+    display: none;
+  }
+
   .mobile-socials {
     display: flex;
     flex-direction: column;
@@ -124,25 +135,51 @@ header .box-icons a:hover {
     margin-top: 1rem;
     align-items: flex-start;
   }
+
   header nav ul {
-    display: none;
+    display: flex;
     flex-direction: column;
     background: #1a2233;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    padding: 1rem 0;
-    box-shadow: 0 4px 16px #22223b33;
-    transition: all 0.3s;
+    position: fixed;
+    top: 0;
+    right: -70vw;
+    /* Start hidden off-screen */
+    width: 70vw;
+    height: 100vh;
+    z-index: 1000;
+    padding: 2rem 1rem;
+    box-shadow: 2px 0 16px #22223b33;
+    transition: left 0.3s cubic-bezier(.4, 2, .6, 1);
+    border-radius: 0 18px 18px 0;
+    gap: 1.2rem;
+    align-items: flex-start;
   }
+
   header nav ul.active {
-    display: flex;
+    right: 0;
+    /* Slide in from the left */
   }
+
+  .left .name {
+    margin: auto;
+    margin-right: 3.89rem;
+  }
+
   .hamburger {
     display: flex;
+    position: absolute;
+    top: 1rem;
+    right: 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    margin: 14px;
+    z-index: 200;
+    /* <-- Ensure it's above other elements */
   }
+  .mobile-close{
+    display: inline;
+  }
+
 }
 
 /* Container */
@@ -231,7 +268,7 @@ header .box-icons a:hover {
   transform: scale(1.05);
 }
 
-.home-vid-box {
+.home-photo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -242,7 +279,7 @@ header .box-icons a:hover {
   margin: 0;
 }
 
-.home-vid-box video {
+.home-photo img {
   width: 100%;
   max-width: 420px;
   border-radius: 14px;
@@ -262,6 +299,7 @@ header .box-icons a:hover {
   position: relative;
   box-shadow: 0 2px 8px #e0e6ed44;
 }
+
 .scroll-down::after {
   content: '';
   display: block;
@@ -313,7 +351,8 @@ header .box-icons a:hover {
   margin-bottom: 0.7rem;
 }
 
-.card img, .card video {
+.card img,
+.card video {
   max-width: 100px;
   border-radius: 8px;
   margin: 0.5rem auto 0;
@@ -417,7 +456,8 @@ header .box-icons a:hover {
   position: relative;
 }
 
-.designer, .coding {
+.designer,
+.coding {
   flex: 1 1 220px;
   min-width: 220px;
   max-width: 320px;
@@ -431,7 +471,8 @@ header .box-icons a:hover {
   margin-right: 1rem;
 }
 
-.designer h1, .coding h1 {
+.designer h1,
+.coding h1 {
   font-size: 1.15rem;
   margin-bottom: 0.5rem;
   font-weight: 700;
@@ -439,7 +480,8 @@ header .box-icons a:hover {
   letter-spacing: 1px;
 }
 
-.designer p, .coding p {
+.designer p,
+.coding p {
   font-size: 1rem;
   color: #22223b;
   margin-bottom: 0;
@@ -487,22 +529,6 @@ header .box-icons a:hover {
   box-shadow: 0 4px 16px #1e7c8033;
 }
 
-/* Responsive for Skills Section */
-@media (max-width: 900px) {
-  .skills-box {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 1.2rem 0.5rem;
-  }
-  .designer, .coding {
-    margin-left: 0;
-    margin-right: 0;
-    max-width: 100%;
-  }
-  .slider {
-    margin: 1.2rem 0 0 0;
-  }
-}
 
 /* Contact Section */
 .contact-section {
@@ -571,18 +597,9 @@ footer {
   }
 }
 
-@media (max-width: 900px) {
-  header {
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 1.2rem 0.5rem 1rem 0.5rem;
-  }
-  .section-title {
-    font-size: 1.5rem;
-  }
-}
 
 @media (max-width: 700px) {
+
   .info-cards,
   .skills-box,
   .project-card,
@@ -590,14 +607,16 @@ footer {
     flex-direction: column;
     align-items: stretch;
   }
+
   .project-vidbox,
   .project-info,
-  .home-vid-box,
+  .home-photo,
   .home-info {
     max-width: 100%;
   }
+
   .project-vidbox video,
-  .home-vid-box video {
+  .home-photo img {
     min-height: 180px;
     max-width: 100%;
   }
@@ -609,16 +628,146 @@ footer {
     border-radius: 0;
     box-shadow: none;
   }
+
   .section-title {
     font-size: 1.1rem;
   }
+
   footer {
     border-radius: 0;
     font-size: 0.95rem;
     padding: 1rem 0;
   }
+
   header nav ul {
     flex-direction: column;
     gap: 0.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+
+  .sidebar,
+  .hamburger {
+    display: none !important;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2.5rem;
+    padding: 1.2rem 1.5rem 1rem 1.5rem;
+  }
+.home-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .home-photo img {
+    max-width: 100%;
+    min-height: 180px;
+    display: block;
+    margin: 0 auto;
+    /* On mobile, image is centered and full width */
+  }
+  .left {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0;
+    width: auto;
+    text-align: left;
+    display: flex;
+  }
+
+  .left img {
+    margin: 0;
+    display: block;
+  }
+
+  .left .name {
+    margin: 0 0 0 0.7rem;
+    font-size: 1.1rem;
+    display: block;
+    text-align: left;
+  }
+
+  nav {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  header nav ul {
+    gap: 1.5rem;
+    justify-content: flex-start;
+    font-size: 1.08rem;
+    padding: 0;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: transparent;
+    position: static;
+    box-shadow: none;
+    margin-left: 2.5rem;
+  }
+
+  header nav ul li {
+    text-align: center;
+    flex: 0 0 auto;
+  }
+
+  .box-icons {
+    display: none !important;
+  }
+
+  .mobile-socials {
+    display: none !important;
+  }
+
+  /* Section adjustments for tablet */
+  .container {
+    padding: 1.2rem 0.7rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .info-cards,
+  .skills-box,
+  .project-card,
+  .home {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.2rem;
+  }
+
+  .card,
+  .designer,
+  .coding {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .slider {
+    margin: 1.2rem 0 0 0;
+  }
+
+  .social-box {
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  footer {
+    font-size: 1rem;
+    padding: 1rem 0;
   }
 }

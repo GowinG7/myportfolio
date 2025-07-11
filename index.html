@@ -20,11 +20,19 @@
         </div>
         <nav>
             <ul>
+
+            <!-- Add as the first item in your nav ul -->
+            <li class="mobile-close" style="margin-bottom:1rem;">
+            <button id="closeNavBtn" aria-label="Close menu" style="background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;">&times;</button>
+            </li>
+
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skill">Skills</a></li>
                 <li><a href="#project">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+
+                
 
             <!-- Social links should be here for mobile -->
                 <li class="mobile-socials">
@@ -61,12 +69,15 @@
                 <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
                     <i class='bx bx-link-external'></i> Contact Me
                 </button>
-            </div>
+            <!-- </div>
             <div class="home-vid-box">
                 <video autoplay loop muted playsinline>
                     <source src="videos/rightsec.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+            </div> -->
+            <div class="home-photo">
+                <img src="videos/myself.jpg" alt="Gobinda Ghimire photo">
             </div>
             <div class="scroll-down" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })" aria-label="Scroll down"></div>
         </section>  
@@ -117,7 +128,59 @@
                 </div>
                 <div class="project-info">
                     <h1><span class="gradient">NEPALI STAY</span></h1>
-                    <p>Nepali Stay is an online hotel room booking system created with HTML, CSS, Bootstrap, JS, Ajax, MySQL, and PHP. It aims to be implemented as an online hotel room booking system for specific hotels, with all controls to the hotel owners.</p>
+                    <p>
+                        My fourth semester project: Nepali Stay <br>
+                        Tech Used: PHP, MySQL, HTML, CSS, Bootstrap, JS, AJAX
+                        A single-hotel online booking system designed for Nepali hotels. Enables direct room booking without third-party fees.
+                        Features: User login, room booking, admin panel, Nepali-focused UI
+                        Goal: Simplify hotel bookings & support local businesses
+                        Note: Manual booking confirmation by admin; no online payment integration yet
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-vidbox autoBlur">
+                    <video controls autoplay loop muted playsinline>
+                        <source src="videos/project2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="hover-sign" aria-label="Hover sign"></div>
+                </div>
+                <div class="project-info">
+                    <h1><span class="gradient">Shopping Cart</span></h1>
+                    <p>
+                        🛒 Basic Shopping Cart System <br>
+                        Tech Used: HTML, CSS, PHP, MySQL
+                        A simple e-commerce system built to learn core concepts like user login, cart functionality, and payment handling. Supports Cash on Delivery and eSewa (sandbox) for online payment simulation.
+                        Features:
+                        • User registration/login
+                        • Add to cart & checkout
+                        • Admin panel to manage products
+                        • eSewa payment flow integration (test mode)
+                    </p>
+                </div>
+            </div>
+
+              <div class="project-card">
+                <div class="project-vidbox autoBlur">
+                    <video controls autoplay loop muted playsinline>
+                        <source src="videos/project3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="hover-sign" aria-label="Hover sign"></div>
+                </div>
+                <div class="project-info">
+                    <h1><span class="gradient">CRUD with Search box(mini project module)</span></h1>
+                    <p>
+                        🚀 CRUD App with Validation & Search <br>
+                        Tech Used: HTML, CSS, PHP, MySQL, jQuery
+                        A basic CRUD system with real-time search and both front-end (jQuery) and back-end (PHP) validation. Built to practice data handling, form validation, and dynamic interactions with a database.
+                        Features:
+                        • Add, edit, delete records
+                        • Live search
+                        • Data validation on both client & server sides
+                    </p>
                 </div>
             </div>
             <!-- Add more project cards as needed -->
@@ -172,5 +235,7 @@
             <p>&copy; Gobinda, created by Gobinda Ghimire &#128521;</p>
         </footer>
     </div>
+
+    <script src="script.js"> </script>
 </body>
 </html>
