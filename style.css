@@ -109,9 +109,10 @@ header .box-icons a:hover {
 .mobile-socials {
   display: none;
 }
-.mobile-close{
-    display: none;
-  }
+
+.mobile-close {
+  display: none;
+}
 
 .desktop-socials {
   display: flex;
@@ -176,13 +177,15 @@ header .box-icons a:hover {
     z-index: 200;
     /* <-- Ensure it's above other elements */
   }
-  .mobile-close{
+
+  .mobile-close {
     display: inline;
   }
-   .card {
+
+  .card {
     flex-direction: column;
     margin-left: 2.7rem;
-    
+
   }
 }
 
@@ -435,7 +438,7 @@ header .box-icons a:hover {
 
 .project-info h1 {
   font-size: 1.3rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.1rem;
   font-weight: 700;
   color: #2563eb;
 }
@@ -606,11 +609,12 @@ footer {
 
   .info-cards,
   .skills-box,
-  .project-card,
+  .project-card
   .home {
     flex-direction: column;
     align-items: stretch;
   }
+   
 
   .project-vidbox,
   .project-info,
@@ -665,13 +669,15 @@ footer {
     gap: 2.5rem;
     padding: 1.2rem 1.5rem 1rem 1.5rem;
   }
-.home-photo {
+
+  .home-photo {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     margin-top: 1rem;
   }
+
   .home-photo img {
     max-width: 100%;
     min-height: 180px;
@@ -679,6 +685,7 @@ footer {
     margin: 0 auto;
     /* On mobile, image is centered and full width */
   }
+
   .left {
     flex-direction: row;
     align-items: center;
@@ -761,6 +768,7 @@ footer {
     margin-left: 0;
     margin-right: 0;
   }
+
   .slider {
     margin: 1.2rem 0 0 0;
   }
