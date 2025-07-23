@@ -240,6 +240,25 @@ header .box-icons a:hover {
   font-weight: 700;
   letter-spacing: 1px;
 }
+.cv-download-btn {
+  display: inline-block;
+  background-color: rgb(77, 88, 97);
+  color: #fff;
+  padding: 0.2rem 0.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-left: 0.4rem;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  font-size: 0.7rem;
+  box-shadow: 0 2px 8px #e0e6ed44;
+}
+.cv-download-btn:hover {
+  background: linear-gradient(90deg, #62cebc 60%, #adb0b8 100%);
+  color: #1a2233;
+  transform: scale(1.05);
+}
 
 .gradient {
   background: linear-gradient(90deg, #2563eb 30%, #60a5fa 100%);
