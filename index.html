@@ -1,357 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gobinda-Portfolio</title>
-    <meta name="description" content="Gobinda Ghimire's portfolio: Aims full stack developer">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/my.jpg" type="image/jpeg">
-    <!-- Add this line in your <head> section -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gobinda Ghimire is an IT support, networking, and web development professional building practical digital systems.">
+  <meta name="theme-color" content="#1a2233">
+  <meta property="og:title" content="Gobinda Ghimire | IT Support & Web Development">
+  <meta property="og:description" content="BCA student and aspiring web developer with hospital IT support and networking experience.">
+  <meta property="og:type" content="website">
+  <title>Gobinda Ghimire | IT Support, Networking & Web Development</title>
+  <link rel="icon" href="images/my.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header and Navigation -->
-    <header>
-        <div class="left">
-            <img src="images/my.jpg" alt="Gobinda Ghimire photo" style="height:40px;width:40px;border-radius:10px;">
-            <span class="name">Gobinda Ghimire</span>
-        </div>
-        <nav>
-            <ul>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Gobinda Ghimire home"><span class="brand-mark">GG</span><span>Gobinda Ghimire</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><i class="bx bx-menu"></i></button>
+    <nav class="site-nav" id="siteNav" aria-label="Main navigation"><a href="#about">About</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+    <a class="header-link" href="GGCV.pdf" download>Download CV <i class="bx bx-download"></i></a>
+  </header>
 
-            <!-- Add as the first item in your nav ul -->
-            <li class="mobile-close" style="margin-bottom:1rem;">
-            <button id="closeNavBtn" aria-label="Close menu" style="background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;">&times;</button>
-            </li>
+  <main>
+    <section class="hero section-shell" id="home">
+      <div class="hero-copy reveal"><p class="eyebrow"><span class="status-dot"></span> Available for IT support and development opportunities</p><h1>BCA Student and Aspiring <em>Web Developer</em> with Hospital IT Support and Networking Experience.</h1><p class="hero-intro">I am Gobinda Ghimire, a BCA student and aspiring IT support, networking, and web development professional from Nepal. I am actively building practical experience and exploring opportunities to contribute and grow.</p><div class="hero-actions"><a class="button button-primary" href="#experience">View my experience <i class="bx bx-right-arrow-alt"></i></a><a class="button button-quiet" href="https://github.com/GowinG7" target="_blank" rel="noreferrer">GitHub profile <i class="bx bxl-github"></i></a></div><div class="hero-meta"><span>Based in Nepal</span><span>Hospital IT experience</span><span>Web development</span></div></div>
+      <div class="hero-visual reveal"><div class="portrait-frame"><img src="videos/myself.jpg" alt="Gobinda Ghimire working at a laptop"></div><div class="code-note"><span class="code-label">CURRENT FOCUS</span><strong>Web systems<br>that solve real needs.</strong><span class="code-line">php · mysql · javascript</span></div></div>
+    </section>
 
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skill">Skills</a></li>
-                <li><a href="#project">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <section class="trust-strip section-shell" aria-label="Core focus areas"><span>Backend foundations</span><span>Product-minded builds</span><span>Clear documentation</span></section>
 
-                
+    <section class="about section-shell" id="about"><div class="section-heading reveal"><h2>Learning with purpose,<br><em>growing through practice.</em></h2></div><div class="info-cards reveal"><article class="info-card"><h3>Who I am</h3><p>A BCA student at Birendra Multiple Campus, Tribhuvan University, developing practical skills through academic, personal, and workplace projects.</p><img src="images/my.jpg" alt="Gobinda Ghimire"></article><article class="info-card"><h3>What I work with</h3><p>PHP, MySQL, HTML, CSS, JavaScript, Java, SQLite, Bootstrap, jQuery, Git, and software documentation.</p><img src="images/language.png" alt="Gobinda's technology stack"></article><article class="info-card"><h3>Open to opportunities</h3><p>Based in Nepal and open to IT support, hospital IT, networking support, and web development opportunities.</p><a class="button button-primary" href="#contact">Contact me <i class="bx bx-right-arrow-alt"></i></a></article><article class="info-card"><h3>How I work</h3><p>I enjoy learning through real problems, documenting my work clearly, and building practical systems that help people.</p><img src="images/card4.png" alt="Coding illustration"></article></div></section>
 
-            <!-- Social links should be here for mobile -->
-                <li class="mobile-socials">
-                <a href="https://t.me/Triflip7" target="_blank"><i class='bx bxl-telegram'></i> Telegram</a>
-                <a href="https://wa.me/9779869610199" target="_blank" style="text-decoration: none; color: inherit;">
-                    <i class="bi bi-whatsapp" style="color: #25D366;"></i> 
-                </a>
+    <section class="work section-shell" id="work"><div class="section-heading work-heading reveal"><div><p class="eyebrow">My projects</p><h2>Projects with a<br><em>purpose behind them.</em></h2></div><p class="heading-note">Academic, practical, and learning projects from my GitHub portfolio.</p></div><div class="project-grid">
+      <article class="project-card project-featured reveal"><div class="project-top"><span class="project-number">01</span><span>Full-stack commerce</span></div><h3>Jersey E-Mart</h3><p>An e-commerce experience for Nepal's sports jersey market, with product discovery, recommendations, admin management, orders, and sandbox payments.</p><div class="tag-list"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>jQuery</span></div><a class="project-link" href="https://github.com/GowinG7/Jersey-E-Mart" target="_blank" rel="noreferrer">View repository <i class="bx bx-up-arrow-alt"></i></a></article>
+      <article class="project-card reveal"><div class="project-top"><span class="project-number">02</span><span>Web application</span></div><h3>Nepali Stay</h3><p>A direct hotel booking system for individual Nepali hotels, including an admin panel and flexible control for each adopting hotel.</p><div class="tag-list"><span>PHP</span><span>MySQL</span><span>Bootstrap 5</span><span>AJAX</span></div><a class="project-link" href="https://github.com/GowinG7/Nepali_stay" target="_blank" rel="noreferrer">View repository <i class="bx bx-up-arrow-alt"></i></a></article>
+      <article class="project-card reveal"><div class="project-top"><span class="project-number">03</span><span>Android application</span></div><h3>SpendWise</h3><p>An offline income and expenses tracker with local persistence, transaction CRUD, daily summaries, and date-based expense review.</p><div class="tag-list"><span>Java</span><span>SQLite</span><span>XML</span></div><a class="project-link" href="https://github.com/GowinG7/Income-Expenses-tracker" target="_blank" rel="noreferrer">View repository <i class="bx bx-up-arrow-alt"></i></a></article>
+      <article class="project-card reveal"><div class="project-top"><span class="project-number">04</span><span>Desktop application</span></div><h3>Employee Record Management</h3><p>A Java Swing and MySQL application for login authentication, employee records, CRUD operations, and structured desktop UI layouts.</p><div class="tag-list"><span>Java Swing</span><span>JDBC</span><span>MySQL</span></div><a class="project-link" href="https://github.com/GowinG7/RecordManagementSystem" target="_blank" rel="noreferrer">View repository <i class="bx bx-up-arrow-alt"></i></a></article>
+      <article class="project-card reveal"><div class="project-top"><span class="project-number">05</span><span>PHP practice system</span></div><h3>CRUD, Search & Validation</h3><p>A records system with live search, client-side jQuery validation, server-side PHP validation, and complete CRUD operations.</p><div class="tag-list"><span>PHP</span><span>MySQL</span><span>jQuery</span></div><a class="project-link" href="https://github.com/GowinG7/misTPS" target="_blank" rel="noreferrer">View repository <i class="bx bx-up-arrow-alt"></i></a></article>
+      <article class="project-card reveal"><div class="project-top"><span class="project-number">06</span><span>Useful web tools</span></div><h3>CV Generators</h3><p>Two simple generators designed for IT students and general users, turning structured information into practical CV documents.</p><div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><div class="project-links"><a class="project-link" href="https://itstudentcvgenerator.netlify.app/" target="_blank" rel="noreferrer">IT students <i class="bx bx-up-arrow-alt"></i></a><a class="project-link" href="https://easycvgenerate.netlify.app/" target="_blank" rel="noreferrer">General users <i class="bx bx-up-arrow-alt"></i></a></div></article>
+      <article class="project-card reveal"><div class="project-top"><span class="project-number">07</span><span>Web utility</span></div><h3>Simple Calculator</h3><p>A clean browser calculator covering addition, subtraction, multiplication, and division with a straightforward interface.</p><div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a class="project-link" href="https://ggsimplecalculator.netlify.app/" target="_blank" rel="noreferrer">Live demo <i class="bx bx-up-arrow-alt"></i></a></article>
+      <article class="project-card reveal"><div class="project-top"><span class="project-number">08</span><span>Public-service systems</span></div><h3>Cancer Registry</h3><p>A project from my GitHub portfolio focused on structured information management for a healthcare context.</p><div class="tag-list"><span>PHP</span><span>MySQL</span><span>Web system</span></div><a class="project-link" href="https://github.com/GowinG7/CancerRegistry" target="_blank" rel="noreferrer">View repository <i class="bx bx-up-arrow-alt"></i></a></article>
+      <article class="project-card reveal"><div class="project-top"><span class="project-number">09</span><span>Education website</span></div><h3>Nursing College Website</h3><p>A college website project designed to present institutional information and make important content easier to find.</p><div class="tag-list"><span>HTML</span><span>CSS</span><span>Web design</span></div><a class="project-link" href="https://github.com/GowinG7/Nursing_college_website" target="_blank" rel="noreferrer">View repository <i class="bx bx-up-arrow-alt"></i></a></article>
+      <article class="project-card reveal"><div class="project-top"><span class="project-number">10</span><span>Community reporting</span></div><h3>Hmro Gunaso</h3><p>A reporting system that helps patients send complaints about unfair or intolerable hospital behavior to administrators for review.</p><div class="tag-list"><span>Web application</span><span>Admin review</span><span>Healthcare</span></div></article>
+      <article class="project-card reveal"><div class="project-top"><span class="project-number">11</span><span>Web-based healthcare system</span></div><h3>Lab Reports</h3><p>A hospital lab-report access site where patients can view their reports online without creating an account or registering.</p><div class="tag-list"><span>Web application</span><span>Healthcare</span><span>Online access</span></div><a class="project-link" href="https://github.com/GowinG7/intern_lab" target="_blank" rel="noreferrer">View repository <i class="bx bx-up-arrow-alt"></i></a></article>
+    </div><div class="project-controls"><button class="project-toggle" id="projectToggle" type="button" aria-expanded="false">Show more projects <i class="bx bx-chevron-down"></i></button></div><div class="more-work reveal"><span>More work includes Nepali Stay, CRUD Search, Cancer Registry, Nursing College Website, and Hmro Gunaso.</span><a class="text-link" href="https://github.com/GowinG7" target="_blank" rel="noreferrer">See GitHub activity <i class="bx bx-right-arrow-alt"></i></a></div></section>
 
-                <a href="https://www.linkedin.com/in/gobinda-ghimire/" target="_blank"><i class='bx bxl-linkedin-square'></i> Linkedln</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="box-icons">
-            <a href="https://t.me/Triflip7" target="_blank" aria-label="Telegram"><i class='bx bxl-telegram'></i></a>
-            <a href="https://wa.me/9779869610199" target="_blank" style="text-decoration: none; color: inherit;">
-              <i class='bi bi-whatsapp' style="color:#25D366" ></i> 
-            </a>
-  
-            <a href="https://www.linkedin.com/in/gobinda-ghimire/" target="_blank" aria-label="LinkedIn"><i class='bx bxl-linkedin-square'></i></a>
-        </div>
+    <section class="experience section-shell" id="experience"><div class="section-heading reveal"><p class="eyebrow">Experience & credentials</p><h2>Learning that meets<br><em>real responsibility.</em></h2></div><div class="experience-grid reveal"><article><span class="experience-date">May — Aug 2026 · 3 months</span><h3>IT Support, Networking & Web Development Intern</h3><p class="company">B.P. Koirala Memorial Cancer Hospital · Bharatpur, Chitwan</p><p>Supported computer systems, hardware, printers, scanners, operating system setup, software configuration, and day-to-day IT troubleshooting. Worked on network distribution and resolving network problems by checking switches, media converters, Ethernet connections, and IP configuration. Also assisted with network connectivity issues, web-system maintenance, testing, and improvement.</p></article><article><span class="experience-date">April 2026 · 26 days</span><h3>Branch Coordinator</h3><p class="company">Classic Tech · Chitwan Branch</p><p>Worked as a Branch Coordinator for 26 days, supporting branch coordination and day-to-day operational responsibilities.</p></article><article><span class="experience-date">2022 — 2027 expected</span><h3>Bachelor of Computer Applications</h3><p class="company">Birendra Multiple Campus · Tribhuvan University, Nepal</p><p>Building a broad foundation across programming, databases, software documentation, web development, and application design.</p></article><article><span class="experience-date">Achievements & Certificates</span><ul class="achievement-list"><li>BCA Project Writing Certificate</li><li>2-Day AI and Governance Participation Certificate</li><li>IT and Business Bootcamp by ING Group: Participation and Winner Certificates</li></ul></article></div></section>
 
-        <!-- Add this after your .box-icons in the header -->
-        <div class="hamburger" id="hamburger" aria-label="Open navigation" tabindex="0">
-        <span></span>
-        <span></span>
-        <span></span>
-        </div>
-    </header>
+    <section class="skills section-shell" id="skills"><div class="section-heading reveal"><p class="eyebrow">What I bring</p><h2>Technical range,<br><em>grounded in fundamentals.</em></h2></div><div class="skill-list reveal"><div class="skill-row"><span>01</span><h3>Backend & data</h3><p>PHP, MySQL, SQLite, JDBC, authentication, CRUD, validation, and eSewa sandbox payment flows.</p></div><div class="skill-row"><span>02</span><h3>Frontend craft</h3><p>HTML, CSS, JavaScript, jQuery, Bootstrap 5, responsive layouts, and user-focused flows.</p></div><div class="skill-row"><span>03</span><h3>Planning & delivery</h3><p>Git/GitHub, ER diagrams, DFDs, flowcharts, use cases, SDLC models, test cases, and documentation.</p></div><div class="skill-row"><span>04</span><h3>Tools & environments</h3><p>VS Code, XAMPP, Android Studio, Eclipse, NetBeans, Draw.io, and collaborative project workflows.</p></div></div></section>
 
-    <div class="container">
-        <!-- Home Section -->
-        <section class="home" id="home">
-            <div class="home-info">
-                <div class="home-info-title">
-                    <i class='bx bxl-sketch'></i>
-                    My Portfolio 
-                </div>
-                <h1>Providing <span class="gradient">the best</span> Project <span class="gradient">Experience</span></h1>
-                <p>I'm  backend developer working with  PHP, Mysql, HTML, CSS, JS, Bootstrap, JQuery: aims to be full stack developer. Also have good knowledge in proper documentation of the project with all required diagram.</p>
-                <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
-                    <i class='bx bx-link-external'></i> Contact Me
-                </button>
-                                <!-- Add this button below your Contact Me button in .home-info -->
-                <a href="GGCV.pdf" download class="cv-download-btn">
-                  <i class='bx bx-download'></i> Download CV
-                </a>
-            <!-- </div>
-            <div class="home-vid-box">
-                <video autoplay loop muted playsinline>
-                    <source src="videos/rightsec.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div> -->
-            <div class="home-photo">
-                <img src="videos/myself.jpg" alt="Gobinda Ghimire photo">
-            </div>
-            <div class="scroll-down" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })" aria-label="Scroll down"></div>
-        </section>  
+    <section class="contact section-shell" id="contact"><div class="contact-panel reveal"><div><p class="eyebrow">Have a project in mind?</p><h2>Let's make something<br><em>clear and useful.</em></h2><a class="text-link contact-conversation" href="mailto:ghimire7.gobinda@gmail.com?subject=Portfolio%20inquiry">Start a conversation <i class="bx bx-right-arrow-alt"></i></a></div><div class="contact-actions"><a class="button button-light" href="mailto:ghimire7.gobinda@gmail.com">Email me <i class="bx bx-envelope"></i></a><a class="contact-detail" href="tel:+9779869610199"><i class="bx bx-phone"></i> Call +977 9869610199</a><a class="contact-detail" href="mailto:ghimire7.gobinda@gmail.com"><i class="bx bx-envelope"></i> ghimire7.gobinda@gmail.com</a><a class="contact-detail" href="https://www.linkedin.com/in/gobinda-ghimire/" target="_blank" rel="noreferrer"><i class="bx bxl-linkedin-square"></i> LinkedIn</a><a class="contact-detail" href="https://wa.me/9779869610199" target="_blank" rel="noreferrer"><i class="bx bxl-whatsapp"></i> WhatsApp</a></div></div></section>
+  </main>
 
-        <!-- About Section -->
-        <section class="info-section" id="about">
-            <h1 class="section-title">Hello, there &hearts;</h1>
-            <div class="info-cards">
-                <div class="card">
-                    <h1>I'm Gobinda Ghimire</h1>
-                    <p>Currently undergraduate BCA IT 4 years course(TU Nepal) student, continuously learning to dive into the frontend and backend, aiming to be a full stack developer.</p>
-                    <img src="images/my.jpg"  alt="Gobinda Ghimire">
-                </div>
-                <div class="card">
-                    <h1>Tech stack</h1>
-                    <p>I am working with a variety of languages: HTML, CSS, JS, PHP, MySQL, Java, SQLITE and frameworks like Bootstrap and other essential tools and plugins that allow me to build efficient and scalable systems.</p>
-                    <img src="images/language.png" alt="Tech stack">
-                </div>
-                <div class="card">
-                    <h1>I am flexible to work</h1>
-                    <p>I'm from Nepal and open to remote work worldwide with efficient and flexibility<br>
-                    language: Nepali, English, Hindi</p>
-                    <video autoplay loop muted playsinline>
-                        <source src="videos/globle.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
-                        <i class='bx bx-link-external'></i> Contact Me
-                    </button>
-                </div>
-                <div class="card">
-                    <h1>My Passion for Coding</h1>
-                    <p>With dedication in learning, I have steadily trying to sharpened my skills in both frontend and backend development.</p>
-                    <img src="images/card4.png" alt="Coding passion">
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section class="projects" id="project">
-            <h1 class="section-title"><i class='bx bx-laptop'></i>My Projects</h1>
-            <div class="project-card">
-                <div class="project-vidbox autoBlur">
-                    <video controls autoplay loop muted playsinline>
-                        <source src="videos/project1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="hover-sign" aria-label="Hover sign"></div>
-                </div>
-                <div class="project-info">
-                    <h1><span class="gradient">NEPALI STAY</span></h1>
-                    <p>
-                        My fourth semester project: Nepali Stay <br>
-                        Tech Used: PHP, MySQL, HTML, CSS, Bootstrap, JS
-                        A single-hotel online booking system designed for Nepali hotels. Enables direct room booking without third-party fees.
-                        Features: User login, room booking, admin panel, Nepali-focused UI
-                        Goal: Simplify hotel bookings & support local businesses
-                        Note: Manual booking confirmation by admin; no online payment integration yet
-                    </p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-vidbox autoBlur">
-                    <video controls autoplay loop muted playsinline>
-                        <source src="videos/project2.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="hover-sign" aria-label="Hover sign"></div>
-                </div>
-                <div class="project-info">
-                    <h1><span class="gradient">Shopping Cart</span></h1>
-                    <p>
-                        🛒 Basic Shopping Cart System <br>
-                        Tech Used: HTML, CSS, PHP, MySQL
-                        A simple e-commerce system built to learn core concepts like user login, cart functionality, and payment handling. Supports Cash on Delivery and eSewa (sandbox) for online payment simulation.
-                        Features:
-                        • User registration/login
-                        • Add to cart & checkout
-                        • Admin panel to manage products
-                        • eSewa payment flow integration (test mode)
-                    </p>
-                </div>
-            </div>
-
-              <div class="project-card">
-                <div class="project-vidbox autoBlur">
-                    <video controls autoplay loop muted playsinline>
-                        <source src="videos/project3.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="hover-sign" aria-label="Hover sign"></div>
-                </div>
-                <div class="project-info">
-                    <h1><span class="gradient">CRUD with Search box(mini project module)</span></h1>
-                    <p>
-                        🚀 CRUD App with Validation & Search <br>
-                        Tech Used: HTML, CSS, PHP, MySQL,JQuery
-                        A basic CRUD system with real-time search and both front-end (JQuery) and back-end (PHP) validation. Built to practice data handling, form validation, and dynamic interactions with a database.
-                        Features:
-                        • Add, edit, delete records
-                        • Live search
-                        • Data validation on both client & server sides
-                    </p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                
-                <div class="project-info">
-                    <h1><span class="gradient">Simple Calculator</span></h1>
-                    <p>
-                        A simple calculator web app built with HTML, CSS, and JavaScript. It performs basic arithmetic operations like addition, subtraction, multiplication, and division. The design is clean and user-friendly, making it easy to use for quick calculations.
-                    </p>
-                    <br>
-                    <a href="https://ggsimplecalculator.netlify.app/" target="_blank" aria-label="Live demo link"><i class='bx bx-link-external'></i> Live Demo</a>
-
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-info">
-                    <h1><span class="gradient">Jersey E-Mart</span></h1>
-                    <p>
-                        My 6th semester project: Jersey E-Mart <br>
-                        Tech Used: PHP, MySQL, HTML, CSS, Bootstrap, JS<br>
-                        A full-stack e-commerce web application which focuses on Nepal's sports jerseys market. It allows users to browse, search, and purchase jerseys online, 
-                        while providing an admin panel for product management and order tracking. 
-                        The system implements content-based recommendation and popularity-based ranking 
-                        algorithms for product sorting. Payment is handled through Cash on Delivery and eSewa (sandbox) for online payment simulation. 
-                    </p>
-                    <br>
-                    <a href="https://github.com/GowinG7/Jersey-E-Mart.git" target="_blank" aria-label="github repo link"><i class='bx bx-link-external'></i> Github Repo</a>
-                    Visit my Linkedln for more projects details <a href="https://www.linkedin.com/posts/gobinda-ghimire-b7251036a_jersey-e-mart-full-stack-e-commerce-ugcPost-7420926508216684544--L-1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFuOc4YBaiCPTW43exd3lzL5yKxkobPm-Oc"
-                    target="_blank" aria-label="LinkedIn post link"><i class='bx bxl-linkedin-square'></i> Linkedln Post</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-            <div class="project-info">
-                <h1><span class="gradient">SpendWise – Income & Expenses Tracker</span></h1>
-                <p>
-                    My Android learning project: SpendWise <br>
-                    Tech Used: Java, XML, SQLite, RecyclerView <br>
-                    A basic Android application designed to help users manage daily income and expenses in a structured and user-friendly way. 
-                    The app allows users to add, update, delete, and analyze financial transactions efficiently through a clean dashboard interface. 
-                    It uses SQLite for persistent offline data storage and RecyclerView for optimized transaction list rendering. 
-                    The project focuses on implementing CRUD operations, local database management, and effective UI–data binding in Android development.
-                </p>
-                <br>
-                 <a href="https://github.com/GowinG7/Income-Expenses-tracker.git" target="_blank" aria-label="github repo link"><i class='bx bx-link-external'></i> Github Repo</a>
-                    Visit my Linkedln for more projects details <a href="https://www.linkedin.com/posts/gobinda-ghimire-b7251036a_learning-androiddevelopment-java-activity-7427776778900865024-sv-W?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFuOc4YBaiCPTW43exd3lzL5yKxkobPm-Oc"
-                    target="_blank" aria-label="LinkedIn post link"><i class='bx bxl-linkedin-square'></i> Linkedln Post</a>
-            </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-info">
-                    <h1><span class="gradient">Record Management System</span></h1>
-                    <p>
-                    Academic project: Record Management System <br>
-                    Tech Used: Java (Swing, JDBC), MySQL <br>
-                    A desktop-based application developed using Java Swing for the graphical user interface and MySQL as the backend database. 
-                    The system enables users to add, update, delete, search, and manage records such as name, phone, email, and address. 
-                    It includes secure admin login authentication, duplicate validation for phone and email fields, 
-                    dynamic data rendering using JTable, and safe database interaction through PreparedStatement. 
-                    The project demonstrates GUI design, JDBC connectivity, CRUD implementation, input validation, 
-                    and structured login–logout workflow handling.
-                    </p>
-                    <br>
-                    <a href="https://github.com/GowinG7/RecordManagementSystem.git" target="_blank" aria-label="github repo link">
-                    <i class='bx bx-link-external'></i> Github Repo
-                    </a>
-                    &nbsp; | &nbsp;
-                    Visit my LinkedIn for more project details 
-                    <a href="https://www.linkedin.com/posts/gobinda-ghimire-b7251036a_javadevelopment-java-jdbc-activity-7428170135917641730-m7uX?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFuOc4YBaiCPTW43exd3lzL5yKxkobPm-Oc" target="_blank" aria-label="LinkedIn post link">
-                    <i class='bx bxl-linkedin-square'></i> LinkedIn Post
-                    </a>
-                </div>
-            </div>
-
-              <div class="project-card">
-                
-                <div class="project-info">
-                    <h1><span class="gradient">CV Generator</span></h1>
-                    <p>
-                        For IT Student and who have projects:                     </p>
-                    <br>
-                    <a href="https://itstudentcvgenerator.netlify.app/" target="_blank" aria-label="Live demo link"><i class='bx bx-link-external'></i> Live Demo</a>
-
-                </div>
-            </div>
-
-              <div class="project-card">
-                
-                <div class="project-info">
-                    <h1><span class="gradient">CV Generator</span></h1>
-                    <p>
-                        For any Profession:                     </p>
-                    <br>
-                    <a href="https://easycvgenerate.netlify.app/" target="_blank" aria-label="Live demo link"><i class='bx bx-link-external'></i> Live Demo</a>
-
-                </div>
-            </div>
-
-
-
-
-            <!-- Add more project cards as needed -->
-        </section>
-
-        <!-- Skills Section -->
-        <section class="skills" id="skill">
-            <h1 class="section-title">
-                My Skills &#128187; 
-            </h1>
-            <div class="skills-box">
-                <div class="designer">
-                    <h1 class="gradient">Designer <i class='bx bx-laptop'></i></h1>
-                    <p> I have sound knowledge in ER-diagram, DFD design, Gantt chart, various SDLC models, test case design, use case diagram, and more to help create project's proper documentation.</p>
-                </div>
-                <div class="coding">
-                    <h1 class="gradient">Coding <i class='bx bx-code-block'></i></h1>
-                    <p>Backend devloper with php and mysql. Although I have knowledge of programming languages like HTML, XML CSS, JavaScript Bootstrap and Git/GitHub to build efficient and user-friendly websites. Additionally, I also have knowledge of other languages like C, Java,JQuery and the DSA too.</p>
-                </div>
-            </div>
-            <div class="slider">
-                <div class="list">
-                    <div class="item"><img src="images/1.png" alt="HTML5"></div>
-                    <div class="item"><img src="images/2.png" alt="JS"></div>
-                    <div class="item"><img src="images/3.png" alt="php"></div>
-                    <div class="item"><img src="images/4.png" alt="Mysql"></div>
-                    <div class="item"><img src="images/5.png" alt="Figma"></div>
-                    <div class="item"><img src="images/6.png" alt="CSS"></div>
-                    <div class="item"><img src="images/seven.png" alt="Github"></div>
-                    <div class="item"><img src="images/8.png" alt="Bootstrap"></div>
-                    <div class="item"><img src="images/9.png" alt="techstack"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="contact-section" id="contact">
-            <h1 class="section-title">Let's talk &#128578;</h1>
-            <div class="social-box">
-                <a href="https://wa.me/9779869610199" target="_blank" style="text-decoration: none; color: inherit;">
-    <i class="bi bi-whatsapp" style="color: #25D366;"></i> Chat on WhatsApp
-</a>
-
-
-                <a href="mailto:ghimire7.gobinda@gmail.com"><i class='bx bx-envelope'></i>Email</a>    
-                <div class="social-icons">
-                    <a href="https://t.me/Triflip7" target="_blank"><i class='bx bxl-telegram'></i> Telegram</a>
-                   <a href="https://www.linkedin.com/in/gobinda-ghimire/" target="_blank"><i class='bx bxl-linkedin-square'></i> Linkedln</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer>
-            <p>&copy; Gobinda, created by Gobinda Ghimire &#128521;</p>
-        </footer>
-    </div>
-
-    <script src="script.js"> </script>
+  <footer class="site-footer section-shell"><span>© 2026 Gobinda Ghimire · Bharatpur, Nepal</span><a href="https://gobindaghimire.com.np" target="_blank" rel="noreferrer">gobindaghimire.com.np</a><a href="#home">Back to top <i class="bx bx-up-arrow-alt"></i></a></footer>
+  <script src="script.js"></script>
 </body>
 </html>

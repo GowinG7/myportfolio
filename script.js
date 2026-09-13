@@ -1,41 +1,31 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const hamburger = document.getElementById('hamburger');
-  const navUl = document.querySelector('header nav ul');
-  const closeBtn = document.getElementById('closeNavBtn');
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menuToggle');
+  const siteNav = document.getElementById('siteNav');
 
-  if (hamburger && navUl) {
-    hamburger.addEventListener('click', () => {
-      navUl.classList.toggle('active');
-    });
-  }
+  menuToggle.addEventListener('click', () => {
+    const isOpen = siteNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+    menuToggle.innerHTML = `<i class="bx ${isOpen ? 'bx-x' : 'bx-menu'}"></i>`;
+  });
 
-  if (closeBtn) {
-    closeBtn.addEventListener('click', function () {
-      navUl.classList.remove('active');
-    });
-  }
-
-  // Close menu on link click (only on mobile)
-  document.querySelectorAll('header nav ul li a').forEach(link => {
+  siteNav.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
-      if (window.innerWidth <= 700) {
-        navUl.classList.remove('active');
-      }
+      siteNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open navigation');
+      menuToggle.innerHTML = '<i class="bx bx-menu"></i>';
     });
   });
 
-  // Smooth scroll for nav links
-  document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const targetId = this.getAttribute('href').substring(1);
-      const targetSection = document.getElementById(targetId);
-      if (targetSection) {
-        e.preventDefault();
-        window.scrollTo({
-          top: targetSection.offsetTop - 50,
-          behavior: 'smooth'
-        });
-      }
-    });
+  const projectToggle = document.getElementById('projectToggle');
+  const projectGrid = document.querySelector('.project-grid');
+
+  projectToggle.addEventListener('click', () => {
+    const isExpanded = projectGrid.classList.toggle('expanded');
+    projectToggle.setAttribute('aria-expanded', String(isExpanded));
+    projectToggle.innerHTML = isExpanded
+      ? 'Show fewer projects <i class="bx bx-chevron-up"></i>'
+      : 'Show more projects <i class="bx bx-chevron-down"></i>';
   });
 });
